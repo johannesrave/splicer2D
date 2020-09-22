@@ -1,3 +1,14 @@
-﻿fileFormatVersion: 2
+fileFormatVersion: 2
 guid: ab54bb5f08554394a4bd9de1d5c7abc2
-timeCreated: 1600729613
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - enemy: {fileID: 5270188336237179960, guid: da36a51a4ef6c134d8deb9daf943b3dc, type: 3}
+  - obstacle: {fileID: 5270188336237179960, guid: bd2f1d062eab62b42bf693680282cc8d, type: 3}
+  - powerup: {fileID: 5270188336237179960, guid: a5e2bb6972fed76499114a7c86a63c31, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

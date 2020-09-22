@@ -1,7 +1,15 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class InitGameManager : MonoBehaviour
 {
     [SerializeField]
-    private ScriptableObject _GM;
+    private GameManager GM = GameManager.Instance;
+
+    private void Awake()
+    {
+        Debug.Log("Initializing hook.");
+        
+        //GM = ScriptableObject.CreateInstance<GameManager>();
+    }
 }

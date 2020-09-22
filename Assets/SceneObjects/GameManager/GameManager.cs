@@ -2,32 +2,31 @@
 using System.Collections;
 using UnityEditor;
 
-[CreateAssetMenu]
+[CreateAssetMenu(fileName = "GameManagerAsset", menuName = "GameManager", order = 0)]
 public class GameManager : SingletonScriptableObject<GameManager>
 {
     private GameManager() { }
     
-    [SerializeField]
-    private EntityManager _em;
-    public EntityManager EM
-    {
-        get => _em;
-        set => _em = value;
-    }
+    [SerializeField] private GameData data;
+    [SerializeField] private EntityManager EM;
 
     private static GameState _gameState;
+
     public delegate void OnStateChangeHandler(GameState prevGS, GameState newGS);
     public event OnStateChangeHandler OnStateChange;
 
     public void Awake()
     {
+        Debug.Log("Initializing GameManager.");
         _gameState = GameState.START;
         LoadResources();
     }
 
     private void LoadResources()
     {
-        EM = EntityManager.Instance;
+        Debug.Log("Loading resources.");
+        EM = ScriptableObject.CreateInstance<EntityManager>();;
+        
     }
 
     public GameState GameState 
