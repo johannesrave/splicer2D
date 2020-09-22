@@ -3,9 +3,17 @@ using System.Collections;
 using UnityEditor;
 
 [CreateAssetMenu]
-public class GameManager : ScriptableSingleton<GameManager>
+public class GameManager : SingletonScriptableObject<GameManager>
 {
     private GameManager() { }
+    
+    [SerializeField]
+    private EntityManager _em;
+    public EntityManager EM
+    {
+        get => _em;
+        set => _em = value;
+    }
 
     private static GameState _gameState;
     public delegate void OnStateChangeHandler(GameState prevGS, GameState newGS);
@@ -13,25 +21,26 @@ public class GameManager : ScriptableSingleton<GameManager>
 
     public void Awake()
     {
-        _gameState = GameState.SETUP;
-        loadResources();
+        _gameState = GameState.START;
+        LoadResources();
     }
 
-    private void loadResources()
+    private void LoadResources()
     {
-        throw new System.NotImplementedException();
+        EM = EntityManager.Instance;
     }
 
     public GameState GameState 
     {
-        get { return _gameState; }
-        set { 
-            OnStateChange(_gameState, value); 
+        get => _gameState;
+        set
+        {
+            OnStateChange?.Invoke(_gameState, value);
             _gameState = value;
         }
     }
 }
 public enum GameState
 {
-    INACTIVE, DRAWING, SETUP
+    START, PLAY, PATH, 
 }
