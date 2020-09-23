@@ -6,18 +6,18 @@ using Random = UnityEngine.Random;
 [CreateAssetMenu(fileName = "EntityManager", menuName = "EntityManager", order = 0)]
 public class EntityManager : SingletonScriptableObject<EntityManager>
 {
-    private List<GameObject> _enemies = new List<GameObject>();
-    private List<GameObject> _obstacles = new List<GameObject>();
-    private List<GameObject> _powerups = new List<GameObject>();
+    private readonly List<GameObject> _enemies = new List<GameObject>();
+    private readonly List<GameObject> _obstacles = new List<GameObject>();
+    private readonly List<GameObject> _powerups = new List<GameObject>();
     private List<List<GameObject>> _entities = new List<List<GameObject>>();
     
     [SerializeField] private GameObject enemy;
     [SerializeField] private GameObject obstacle;
     [SerializeField] private GameObject powerup;
     
-    [SerializeField] private int maxEnemies;
-    [SerializeField] private int maxObstacles;
-    [SerializeField] private int maxPowerups;
+    [SerializeField] private int maxEnemies = 0;
+    [SerializeField] private int maxObstacles = 0;
+    [SerializeField] private int maxPowerups = 0;
     private void Awake()
     {
         enemy = Resources.Load<GameObject>("Enemy");
@@ -29,22 +29,41 @@ public class EntityManager : SingletonScriptableObject<EntityManager>
         _entities.Add(_obstacles);
         _entities.Add(_powerups);
         
-        FillUpList(_enemies, enemy, maxEnemies);
-        FillUpList(_obstacles, obstacle, maxObstacles);
-        FillUpList(_powerups, powerup, maxPowerups);
-        
+        FillUpAllLists();
     }
 
-    private static void FillUpList(ICollection<GameObject> collection, GameObject entity, int maxNumber)
+    internal void FillUpAllLists()
     {
-        Debug.Log($"Filling up {collection}");
+        // _enemies.ForEach(Debug.Log);
+        _entities.ForEach(list => 
+            list.RemoveAll(item => item == null)
+        );
+        // _enemies.ForEach(Debug.Log);
+        //_enemies.RemoveAll(item => item == null);
+        
+        FillUpSingleList(_enemies, enemy, maxEnemies);
+        FillUpSingleList(_obstacles, obstacle, maxObstacles);
+        FillUpSingleList(_powerups, powerup, maxPowerups);
+
+        // _enemies.ForEach(Debug.Log);
+    }
+
+    private static void FillUpSingleList(ICollection<GameObject> collection, GameObject entity, int maxNumber)
+    {
+        // Debug.Log($"Filling up {collection} of {entity}");
         for (int i = collection.Count; i < maxNumber; i++)
         {
-            var newEnemy = Instantiate(entity);
-            var randomPosition = new Vector2(Random.Range(-5.0f, 5.0f), Random.Range(0f, 4.0f));
-            newEnemy.transform.position = randomPosition;
-            collection.Add(newEnemy);
-            Debug.Log(newEnemy);
+            var newEntity = Instantiate(entity);
+            var randomPosition = new Vector2(Random.Range(-5.0f, 5.0f), Random.Range(3f, 7f));
+            newEntity.transform.position = randomPosition;
+            collection.Add(newEntity);
+            // Debug.Log(newEntity);
         }
+    }
+
+    public void RemoveFromList(GameObject gameObject)
+    {
+        _entities.ForEach(list => list.Remove(gameObject));
+        
     }
 }

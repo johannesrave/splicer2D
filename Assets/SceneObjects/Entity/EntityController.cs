@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Data;
 using UnityEngine;
 
@@ -16,8 +17,18 @@ public class EntityController : MonoBehaviour
     protected void Awake()
     {
         InitializeEntityFields();
+    }
+
+    private void OnEnable()
+    {
         RegisterEventHandlers();
     }
+
+    private void OnDisable()
+    {
+        DeregisterEventHandlers();
+    }
+
 
     private void InitializeEntityFields()
     {
@@ -32,10 +43,16 @@ public class EntityController : MonoBehaviour
     {
         GM.OnStateChange += OnStateChangeHandler;
     }
+
+    private void DeregisterEventHandlers()
+    {
+        GM.OnStateChange -= OnStateChangeHandler;
+    }
     
     // EventHandlers
     protected void OnStateChangeHandler(GameState oldState, GameState newState)
     {
+        // Debug.Log($"Switched to GM.GameState: {GM.GameState}");
         switch (newState)
         {
             case GameState.START:
@@ -53,32 +70,35 @@ public class EntityController : MonoBehaviour
 
     protected virtual void OnPathState()
     {
-        throw new NotImplementedException();
+        // TODO: throw new NotImplementedException();
     }
 
     protected virtual void OnPlayState()
     {
-        throw new NotImplementedException();
+        // TODO: throw new NotImplementedException();
     }
 
     protected virtual void OnStartState()
     {
-        throw new NotImplementedException();
+        // TODO: throw new NotImplementedException();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log($"Collision detected. other: {other}");
+        // Debug.Log($"Collision detected. other: {other}");
         if (other.gameObject.GetComponent<PlayerController>())
         {
-            Debug.Log($"The other object is a player: " +
-                      $"{other.gameObject.GetComponent<PlayerController>()}");
+            // Debug.Log($"The other object is a player: " +
+            //           $"{other.gameObject.GetComponent<PlayerController>()}");
             Destroy(gameObject);
         }
     }
     
-    void OnDestroy(){
-    
+    protected virtual void OnDestroy()
+    {
+        // Debug.Log("Should fill up lists!");
+        GM.EM.RemoveFromList(gameObject);
+        GM.EM.FillUpAllLists();
     }
 
 }

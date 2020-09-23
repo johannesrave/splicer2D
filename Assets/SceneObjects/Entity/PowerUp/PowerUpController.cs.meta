@@ -5,6 +5,7 @@ MonoImporter:
   serializedVersion: 2
   defaultReferences:
   - data: {fileID: 11400000, guid: ed56fbb3894dc1645b180b078b8ecaae, type: 2}
+  - movement: {fileID: 11400000, guid: f20a3af8529342f4986ecb7975e266ef, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

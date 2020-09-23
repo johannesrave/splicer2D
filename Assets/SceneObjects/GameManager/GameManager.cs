@@ -8,7 +8,7 @@ public class GameManager : SingletonScriptableObject<GameManager>
     private GameManager() { }
     
     [SerializeField] private GameData data;
-    [SerializeField] private EntityManager EM;
+    [SerializeField] public EntityManager EM;
 
     private static GameState _gameState;
 
@@ -20,6 +20,7 @@ public class GameManager : SingletonScriptableObject<GameManager>
         Debug.Log("Initializing GameManager.");
         _gameState = GameState.START;
         LoadResources();
+        GameState = GameState.PLAY;
     }
 
     private void LoadResources()
@@ -31,6 +32,7 @@ public class GameManager : SingletonScriptableObject<GameManager>
         "Instantiate - Clones the object original and returns the clone." (from asset file)
          */
         EM = Instantiate(EM);
+        if (!EM) EM = CreateInstance<EntityManager>();
 
     }
 
@@ -39,8 +41,10 @@ public class GameManager : SingletonScriptableObject<GameManager>
         get => _gameState;
         set
         {
-            OnStateChange?.Invoke(_gameState, value);
+            Debug.Log($"State set to {value}");
+            var oldState = _gameState;
             _gameState = value;
+            OnStateChange?.Invoke(oldState, _gameState);
         }
     }
 }

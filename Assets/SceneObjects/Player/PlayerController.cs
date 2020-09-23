@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerController : EntityController
 {
-    //[SerializeField] private PlayerData data;
     private PathController _path;
     private Camera _camera;
 
@@ -18,12 +17,17 @@ public class PlayerController : EntityController
         InitializeFields();
     }
 
+    private void InitializeFields()
+    {
+        _path = _transform.Find("Path").gameObject.GetComponent<PathController>();
+        _camera = Camera.main;
+    }
 
     private void OnMouseDown()
     {
         _dragging = true;
         GM.GameState = GameState.PATH;
-       SetMouseOffset();
+        SetMouseOffset();
     }
 
     private void OnMouseDrag()
@@ -32,16 +36,12 @@ public class PlayerController : EntityController
         _transform.position = (Vector2) _camera.ScreenToWorldPoint(Input.mousePosition) - _offset;
     }
 
-    protected override void OnPathState()
+    private void OnMouseUp()
     {
-        Debug.Log($"State switched to {GM.GameState}");
+        _dragging = false;
+        GM.GameState = GameState.PLAY;
     }
 
-    private void InitializeFields()
-    {
-        _path = _transform.Find("Path").gameObject.GetComponent<PathController>();
-        _camera = Camera.main;
-    }
     
     // Coroutines
     

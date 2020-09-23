@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a5221687afc4e05a3666ebbbc4d3bb1, type: 3}
   m_Name: PowerUpData
   m_EditorClassIdentifier: 
-  speedFactor: 0.001
+  speedFactor: 0.01
