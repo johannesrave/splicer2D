@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab54bb5f08554394a4bd9de1d5c7abc2, type: 3}
+  m_Name: EntityManager
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 5270188336237179960, guid: da36a51a4ef6c134d8deb9daf943b3dc, type: 3}
+  obstacle: {fileID: 5270188336237179960, guid: bd2f1d062eab62b42bf693680282cc8d, type: 3}
+  powerup: {fileID: 5270188336237179960, guid: a5e2bb6972fed76499114a7c86a63c31, type: 3}
+  maxEnemies: 4
+  maxObstacles: 4
+  maxPowerups: 3
