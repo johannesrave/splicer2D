@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : EntityController
 {
-    [SerializeField] private PlayerData data;
+    //[SerializeField] private PlayerData data;
     private PathController _path;
     private Camera _camera;
 
@@ -22,6 +22,7 @@ public class PlayerController : EntityController
     private void OnMouseDown()
     {
         _dragging = true;
+        GM.GameState = GameState.PATH;
        SetMouseOffset();
     }
 
@@ -30,7 +31,12 @@ public class PlayerController : EntityController
         if (!_dragging) return;
         _transform.position = (Vector2) _camera.ScreenToWorldPoint(Input.mousePosition) - _offset;
     }
-    
+
+    protected override void OnPathState()
+    {
+        Debug.Log($"State switched to {GM.GameState}");
+    }
+
     private void InitializeFields()
     {
         _path = _transform.Find("Path").gameObject.GetComponent<PathController>();
@@ -55,19 +61,5 @@ public class PlayerController : EntityController
         var initialHit = Physics2D.GetRayIntersection(screenPointToRay);
         _offset = initialHit.point - (Vector2) _transform.position;
     }
-
-    // EventHandlers
-    protected override void OnStateChangeHandler(GameState oldState, GameState newState)
-    {
-        switch (newState)
-        {
-            case GameState.PATH:
-                break;
-            case GameState.PLAY:
-                break;
-            case GameState.START:
-                break;
-            default:
-                throw new ArgumentOutOfRangeException(nameof(newState), newState, null);
-        }    }
+    
 }

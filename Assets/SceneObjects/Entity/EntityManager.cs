@@ -36,7 +36,7 @@ public class EntityManager : SingletonScriptableObject<EntityManager>
         Debug.Log($"Filling up {collection}");
         for (int i = collection.Count; i < maxNumber; i++)
         {
-            var newEnemy = GameObject.Instantiate(entity);
+            var newEnemy = Instantiate(entity);
             var randomPosition = new Vector2(Random.Range(-5.0f, 5.0f), Random.Range(0f, 4.0f));
             newEnemy.transform.position = randomPosition;
             collection.Add(newEnemy);

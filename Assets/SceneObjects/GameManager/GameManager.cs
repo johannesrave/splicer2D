@@ -25,8 +25,13 @@ public class GameManager : SingletonScriptableObject<GameManager>
     private void LoadResources()
     {
         Debug.Log("Loading resources.");
-        EM = ScriptableObject.CreateInstance<EntityManager>();;
         
+        /*
+        "CreateInstance - Creates an instance of a scriptable object." (from script)
+        "Instantiate - Clones the object original and returns the clone." (from asset file)
+         */
+        EM = Instantiate(EM);
+
     }
 
     public GameState GameState 
