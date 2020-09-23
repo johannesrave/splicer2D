@@ -5,6 +5,7 @@ using UnityEngine;
 public class EntityController : MonoBehaviour
 {
     [SerializeField] protected EntityData data; //--> implemented in derived classes
+    [SerializeField] protected Movement movement;
     protected GameManager GM;
     protected Transform _transform;
     protected Collider2D _collider;
