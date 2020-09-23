@@ -17,4 +17,4 @@ MonoBehaviour:
   powerup: {fileID: 5270188336237179960, guid: a5e2bb6972fed76499114a7c86a63c31, type: 3}
   maxEnemies: 4
   maxObstacles: 4
-  maxPowerups: 1
+  maxPowerups: 3

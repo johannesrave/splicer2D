@@ -129,8 +129,8 @@
      <Compile Include="Assets\Pixelplacement\Surge\Tween\TweenActions\ValueVector2.cs" />
      <Compile Include="Assets\GUI\ResetButton.cs" />
      <Compile Include="Assets\GUI\QuitButton.cs" />
-     <Compile Include="Assets\SceneObjects\Entity\MovementA.cs" />
-     <Compile Include="Assets\SceneObjects\Entity\Movement.cs" />
+     <Compile Include="Assets\SceneObjects\Entity\Movement\MovementA.cs" />
+     <Compile Include="Assets\SceneObjects\Entity\Movement\Movement.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\Pixelplacement\Surge\Spline\Art\Shaders\Invisible.shader" />

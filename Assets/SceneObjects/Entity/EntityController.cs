@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using UnityEngine;
 
 [RequireComponent(typeof(Collider2D),typeof(SpriteRenderer))]
@@ -11,9 +12,7 @@ public class EntityController : MonoBehaviour
     protected Collider2D _collider;
     private SpriteRenderer _renderer;
     //private EntityData _data;
-
-    private float _speed;
-
+    
     protected void Awake()
     {
         InitializeEntityFields();
@@ -76,6 +75,10 @@ public class EntityController : MonoBehaviour
                       $"{other.gameObject.GetComponent<PlayerController>()}");
             Destroy(gameObject);
         }
+    }
+    
+    void OnDestroy(){
+    
     }
 
 }
