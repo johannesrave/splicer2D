@@ -50,15 +50,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Pixelplacement\Surge\ColliderButton\Editor\ColliderButtonEditor.cs" />
-     <Compile Include="Assets\Pixelplacement\Surge\Spline\Editor\SplineTangentEditor.cs" />
-     <Compile Include="Assets\Pixelplacement\Surge\Spline\Editor\SplineAnchorEditor.cs" />
-     <Compile Include="Assets\Pixelplacement\Surge\StateMachine\Editor\StateMachineEditor.cs" />
-     <Compile Include="Assets\Pixelplacement\Surge\Chooser\Editor\ChooserEditor.cs" />
-     <Compile Include="Assets\Pixelplacement\Surge\StateMachine\Editor\StateEditor.cs" />
-     <Compile Include="Assets\Pixelplacement\Surge\Editor\InitializationRequirements.cs" />
-     <Compile Include="Assets\Pixelplacement\Surge\DisplayObject\Editor\DisplayObjectEditor.cs" />
-     <Compile Include="Assets\Pixelplacement\Surge\Spline\Editor\SplineEditor.cs" />
+     <Compile Include="Assets\PathCreator\Examples\Scripts\Editor\PathSceneToolEditor.cs" />
  <Reference Include="UnityEditor.TestRunner">
  <HintPath>C:/Users/Johannes Rave/SynologyDrive/unity/splicer2D/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
  </Reference>
@@ -745,6 +737,14 @@
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{39927685-867c-e8ab-2013-4bac54ab7a20}</Project>
       <Name>Assembly-CSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="PathCreator.csproj">
+      <Project>{8d3415c9-9cd4-6490-dbc3-c29469793363}</Project>
+      <Name>PathCreator</Name>
+    </ProjectReference>
+    <ProjectReference Include="PathCreatorEditor.csproj">
+      <Project>{8f3bb398-c270-5c6f-d71c-781be0700197}</Project>
+      <Name>PathCreatorEditor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

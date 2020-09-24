@@ -7,10 +7,10 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1265992df93d45645874534df1dd0076, type: 3}
   m_Name: GameManagerAsset
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 1b2d9c3c276748547936796e67784c3f, type: 2}
-  EM: {fileID: 11400000, guid: 1239a5c175fa13d4787dbc257f3596c4, type: 2}
+  entityManager: {fileID: 11400000, guid: 1239a5c175fa13d4787dbc257f3596c4, type: 2}

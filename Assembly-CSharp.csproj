@@ -50,95 +50,37 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Pixelplacement\Surge\ColliderButton\ColliderButton.cs" />
-     <Compile Include="Assets\Pixelplacement\Surge\Tween\TweenActions\ShaderColor.cs" />
-     <Compile Include="Assets\Pixelplacement\Surge\Tween\TweenActions\ShaderFloat.cs" />
+     <Compile Include="Assets\PathCreator\Examples\Scripts\PathSpawner.cs" />
      <Compile Include="Assets\GUI\QuitButton.cs" />
-     <Compile Include="Assets\Pixelplacement\Surge\Tween\TweenActions\CameraBackgroundColor.cs" />
-     <Compile Include="Assets\Pixelplacement\Surge\Utilities\Initialization.cs" />
-     <Compile Include="Assets\Pixelplacement\Surge\Tween\TweenActions\LightRange.cs" />
-     <Compile Include="Assets\Pixelplacement\Surge\Events\Events.cs" />
-     <Compile Include="Assets\Pixelplacement\Surge\Spline\Objects\CurveDetail.cs" />
-     <Compile Include="Assets\Pixelplacement\Surge\ColliderButton\Utilities\ColliderButtonSelector.cs" />
-     <Compile Include="Assets\Pixelplacement\Surge\Tween\TweenActions\LightIntensity.cs" />
-     <Compile Include="Assets\Pixelplacement\Surge\Tween\TweenActions\PanStereo.cs" />
-     <Compile Include="Assets\Pixelplacement\Surge\Tween\TweenActions\ValueFloat.cs" />
-     <Compile Include="Assets\Pixelplacement\Surge\StateMachine\StateMachine.cs" />
+     <Compile Include="Assets\PathCreator\Examples\Scripts\PathPlacer.cs" />
      <Compile Include="Assets\SceneObjects\Camera\ZoomController.cs" />
      <Compile Include="Assets\SceneObjects\Player\PathController.cs" />
-     <Compile Include="Assets\Pixelplacement\Surge\Tween\Helpers\TweenBase.cs" />
-     <Compile Include="Assets\Pixelplacement\Surge\Tween\TweenActions\AnchoredPosition.cs" />
-     <Compile Include="Assets\Pixelplacement\Surge\Tween\TweenActions\ShaderVector.cs" />
-     <Compile Include="Assets\Pixelplacement\Surge\Tween\TweenActions\ValueColor.cs" />
      <Compile Include="Assets\SceneObjects\Entity\PowerUp\PowerUpController.cs" />
-     <Compile Include="Assets\Pixelplacement\Surge\Utilities\LayerMaskHelper.cs" />
      <Compile Include="Assets\SceneObjects\Player\PlayerController.cs" />
-     <Compile Include="Assets\Pixelplacement\Surge\Tween\TweenActions\LightColor.cs" />
-     <Compile Include="Assets\Pixelplacement\Surge\Tween\TweenActions\Pitch.cs" />
-     <Compile Include="Assets\Pixelplacement\Surge\Tween\Helpers\TweenEngine.cs" />
-     <Compile Include="Assets\Pixelplacement\Surge\Tween\TweenActions\TextColor.cs" />
-     <Compile Include="Assets\Pixelplacement\Surge\Tween\TweenActions\Rotate.cs" />
-     <Compile Include="Assets\Pixelplacement\Surge\Tween\Tween.cs" />
-     <Compile Include="Assets\Pixelplacement\Surge\StateMachine\State.cs" />
      <Compile Include="Assets\SceneObjects\Entity\EntityController.cs" />
      <Compile Include="Assets\SceneObjects\Entity\EntityData.cs" />
-     <Compile Include="Assets\Pixelplacement\Surge\Tween\TweenActions\Position.cs" />
-     <Compile Include="Assets\Pixelplacement\Surge\Tween\TweenActions\LocalScale.cs" />
-     <Compile Include="Assets\Pixelplacement\Surge\Tween\TweenActions\ShakePosition.cs" />
      <Compile Include="Assets\SceneObjects\Entity\Movement\MovementA.cs" />
-     <Compile Include="Assets\Pixelplacement\Surge\Tween\TweenActions\ValueVector4.cs" />
-     <Compile Include="Assets\Pixelplacement\Surge\Tween\TweenActions\SplinePercentage.cs" />
-     <Compile Include="Assets\Pixelplacement\Surge\Singleton\Singleton.cs" />
-     <Compile Include="Assets\Pixelplacement\Surge\Tween\TweenActions\LocalPosition.cs" />
-     <Compile Include="Assets\Pixelplacement\Surge\Spline\Utilities\SplineControlledParticleSystem.cs" />
+     <Compile Include="Assets\PathCreator\Examples\Scripts\GeneratePathExample.cs" />
+     <Compile Include="Assets\PathCreator\Examples\Scripts\RoadMeshCreator.cs" />
      <Compile Include="Assets\SceneObjects\Entity\PowerUp\PowerUpData.cs" />
-     <Compile Include="Assets\Pixelplacement\Surge\Tween\TweenActions\ValueInt.cs" />
      <Compile Include="Assets\SceneObjects\Entity\Obstacle\ObstacleController.cs" />
-     <Compile Include="Assets\Pixelplacement\Surge\Tween\TweenActions\ValueVector3.cs" />
      <Compile Include="Assets\SceneObjects\Entity\Movement\Movement.cs" />
-     <Compile Include="Assets\Pixelplacement\Surge\Spline\Utilities\SplineRenderer.cs" />
      <Compile Include="Assets\SceneObjects\GameManager\GameData.cs" />
+     <Compile Include="Assets\PathCreator\Examples\Scripts\PathSceneTool.cs" />
      <Compile Include="Assets\SceneObjects\Entity\Enemy\EnemyData.cs" />
-     <Compile Include="Assets\Pixelplacement\Surge\Tween\TweenActions\Volume.cs" />
-     <Compile Include="Assets\Pixelplacement\Surge\DisplayObject\DisplayObject.cs" />
+     <Compile Include="Assets\PathCreator\Examples\Scripts\PathFollower.cs" />
      <Compile Include="Assets\SceneObjects\GameManager\InitGameManager.cs" />
      <Compile Include="Assets\SceneObjects\Player\PlayerData.cs" />
-     <Compile Include="Assets\Pixelplacement\Surge\Tween\TweenActions\SpriteRendererColor.cs" />
-     <Compile Include="Assets\Pixelplacement\Surge\Tween\TweenActions\FieldOfView.cs" />
-     <Compile Include="Assets\Pixelplacement\Surge\Chooser\Interfaces\IChooser.cs" />
-     <Compile Include="Assets\Pixelplacement\Surge\Spline\Objects\SplineFollower.cs" />
-     <Compile Include="Assets\Pixelplacement\Surge\Tween\TweenActions\Rotation.cs" />
-     <Compile Include="Assets\Pixelplacement\Surge\Utilities\Math.cs" />
-     <Compile Include="Assets\Pixelplacement\Surge\Tween\TweenActions\RawImageColor.cs" />
      <Compile Include="Assets\GUI\ResetButton.cs" />
      <Compile Include="Assets\SceneObjects\GameManager\ScriptableObjectSingleton.cs" />
-     <Compile Include="Assets\Pixelplacement\Surge\Tween\Helpers\TweenUtilities.cs" />
-     <Compile Include="Assets\Pixelplacement\Surge\Spline\Objects\BezierCurves.cs" />
-     <Compile Include="Assets\Pixelplacement\Surge\Tween\TweenActions\Size.cs" />
-     <Compile Include="Assets\Pixelplacement\Surge\Utilities\EditorUtilities.cs" />
-     <Compile Include="Assets\Pixelplacement\Surge\Tween\TweenActions\TextMeshColor.cs" />
-     <Compile Include="Assets\Pixelplacement\Surge\Tween\TweenActions\ImageColor.cs" />
      <Compile Include="Assets\SceneObjects\GameManager\GameManager.cs" />
      <Compile Include="Assets\SceneObjects\Entity\Obstacle\ObstacleData.cs" />
-     <Compile Include="Assets\Pixelplacement\Surge\Chooser\Chooser.cs" />
-     <Compile Include="Assets\Pixelplacement\Surge\Spline\Objects\Spline.cs" />
      <Compile Include="Assets\SceneObjects\Entity\Enemy\EnemyController.cs" />
-     <Compile Include="Assets\Pixelplacement\Surge\Tween\TweenActions\LocalRotation.cs" />
-     <Compile Include="Assets\Pixelplacement\Surge\Spline\Objects\SplineAnchor.cs" />
-     <Compile Include="Assets\Pixelplacement\Surge\Tween\TweenActions\CanvasGroupAlpha.cs" />
-     <Compile Include="Assets\Pixelplacement\Surge\Tween\TweenActions\ValueRect.cs" />
-     <Compile Include="Assets\Pixelplacement\Surge\ColliderButton\Utilities\ColliderButtonInteraction.cs" />
      <Compile Include="Assets\SceneObjects\Entity\EntityManager.cs" />
-     <Compile Include="Assets\Pixelplacement\Surge\Spline\Objects\SplineTangent.cs" />
-     <Compile Include="Assets\Pixelplacement\Surge\Tween\TweenActions\ShaderInt.cs" />
-     <Compile Include="Assets\Pixelplacement\Surge\Tween\TweenActions\ValueVector2.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
-     <None Include="Assets\Pixelplacement\Surge\Spline\Art\Shaders\Invisible.shader" />
-     <None Include="Assets\Pixelplacement\Surge\ReadMe.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
-     <None Include="Assets\Pixelplacement\Surge\License.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
@@ -801,6 +743,16 @@
  <Reference Include="System.Xml.XPath.XDocument">
  <HintPath>D:/Unity/2020.1.6f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.XPath.XDocument.dll</HintPath>
  </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="PathCreator.csproj">
+      <Project>{8d3415c9-9cd4-6490-dbc3-c29469793363}</Project>
+      <Name>PathCreator</Name>
+    </ProjectReference>
+    <ProjectReference Include="PathCreatorEditor.csproj">
+      <Project>{8f3bb398-c270-5c6f-d71c-781be0700197}</Project>
+      <Name>PathCreatorEditor</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

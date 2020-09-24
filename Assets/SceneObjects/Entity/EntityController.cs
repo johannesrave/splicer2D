@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Data;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 [RequireComponent(typeof(Collider2D),typeof(SpriteRenderer))]
 public class EntityController : MonoBehaviour
@@ -64,8 +65,16 @@ public class EntityController : MonoBehaviour
             case GameState.PATH: 
                 OnPathState();
                 break; 
+            case GameState.ATTACK: 
+                OnAttackState();
+                break; 
             default: break; 
         }
+    }
+
+    protected virtual void OnAttackState()
+    {
+        // TODO: throw new NotImplementedException();
     }
 
     protected virtual void OnPathState()
@@ -88,17 +97,18 @@ public class EntityController : MonoBehaviour
         // Debug.Log($"Collision detected. other: {other}");
         if (other.gameObject.GetComponent<PlayerController>())
         {
-            // Debug.Log($"The other object is a player: " +
-            //           $"{other.gameObject.GetComponent<PlayerController>()}");
-            Destroy(gameObject);
+            _transform.position = new Vector2(Random.Range(-5.0f, 5.0f), Random.Range(7f, 12f));
         }
     }
     
     protected virtual void OnDestroy()
     {
+        
+        
+        
         // Debug.Log("Should fill up lists!");
-        GM.EM.RemoveFromList(gameObject);
-        GM.EM.FillUpAllLists();
+        // GM.entityManager.RemoveFromList(gameObject);
+        // GM.entityManager.FillUpAllLists();
     }
 
 }

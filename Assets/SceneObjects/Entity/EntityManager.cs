@@ -20,11 +20,12 @@ public class EntityManager : SingletonScriptableObject<EntityManager>
     [SerializeField] private int maxPowerups = 0;
     private void Awake()
     {
+        Debug.Log("Initializing EntityManager.");
+        
         enemy = Resources.Load<GameObject>("Enemy");
         obstacle = Resources.Load<GameObject>("Obstacle");
         powerup = Resources.Load<GameObject>("PowerUp");
         
-        Debug.Log("Initializing EntityManager.");
         _entities.Add(_enemies);
         _entities.Add(_obstacles);
         _entities.Add(_powerups);

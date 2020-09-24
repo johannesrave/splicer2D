@@ -8,9 +8,8 @@ public class InitGameManager : MonoBehaviour
 
     private void Awake()
     {
-        Debug.Log("Initializing hook.");
-
+        Debug.Log("Trying to initialize EntityManager");
         GM = Instantiate(GM);
-        //GM = ScriptableObject.CreateInstance<GameManager>();
+        // GM = ScriptableObject.CreateInstance<GameManager>();
     }
 }

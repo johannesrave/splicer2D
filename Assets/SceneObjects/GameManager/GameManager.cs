@@ -8,7 +8,7 @@ public class GameManager : SingletonScriptableObject<GameManager>
     private GameManager() { }
     
     [SerializeField] private GameData data;
-    [SerializeField] public EntityManager EM;
+    public EntityManager entityManager;
 
     private static GameState _gameState;
 
@@ -17,22 +17,26 @@ public class GameManager : SingletonScriptableObject<GameManager>
 
     public void Awake()
     {
-        Debug.Log("Initializing GameManager.");
+        Debug.Log("Initializing GameManager");
         _gameState = GameState.START;
         LoadResources();
         GameState = GameState.PLAY;
     }
+    
+    
 
     private void LoadResources()
     {
-        Debug.Log("Loading resources.");
+        Debug.Log("Trying to initialize EntityManager");
+        entityManager = Instantiate<EntityManager>(entityManager);
         
         /*
         "CreateInstance - Creates an instance of a scriptable object." (from script)
         "Instantiate - Clones the object original and returns the clone." (from asset file)
+        entityManager = Instantiate(entityManager);
+        entityManager = CreateInstance<EntityManager>();
+        if (!entityManager) entityManager = CreateInstance<EntityManager>();
          */
-        EM = Instantiate(EM);
-        if (!EM) EM = CreateInstance<EntityManager>();
 
     }
 
@@ -47,8 +51,18 @@ public class GameManager : SingletonScriptableObject<GameManager>
             OnStateChange?.Invoke(oldState, _gameState);
         }
     }
+    
+    // HelperMethods
+    public GameObject DebugSphere(Vector2 position)
+    {
+        GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+        sphere.transform.position = position;
+        sphere.transform.localScale = new Vector2(0.1f, 0.1f);
+        sphere.GetComponent<Renderer>().material.color = Color.red;
+        return sphere;
+    }
 }
 public enum GameState
 {
-    START, PLAY, PATH, 
+    START, PLAY, PATH, ATTACK
 }
