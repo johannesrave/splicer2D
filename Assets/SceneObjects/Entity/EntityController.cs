@@ -4,15 +4,16 @@ using System.Data;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-[RequireComponent(typeof(Collider2D),typeof(SpriteRenderer))]
+[RequireComponent(typeof(CircleCollider2D),typeof(BoxCollider2D),typeof(SpriteRenderer))]
 public class EntityController : MonoBehaviour
 {
     [SerializeField] protected EntityData data; //--> implemented in derived classes
     [SerializeField] protected Movement movement;
     protected GameManager GM;
     protected Transform _transform;
-    protected Collider2D _collider;
     private SpriteRenderer _renderer;
+    protected Collider2D _collider;
+    private CircleCollider2D _spawnCollider;
     //private EntityData _data;
     
     protected void Awake()
@@ -35,11 +36,29 @@ public class EntityController : MonoBehaviour
     {
         GM = GameManager.Instance;
         _transform = gameObject.transform;
-        _collider = GetComponent<Collider2D>();
+        _collider = GetComponent<BoxCollider2D>();
+        _spawnCollider = GetComponent<CircleCollider2D>();
         _renderer = GetComponent<SpriteRenderer>();
         data = Instantiate(data);
     }
+    
+    public delegate void OnHitHandler(GameObject hitEntity);
+    public event OnHitHandler OnEntityHit;
+    
+    
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        // Debug.Log($"Collision detected. other: {other}");
+        if (other.gameObject.GetComponent<PlayerController>())
+        {
+            OnEntityHit?.Invoke(gameObject);
+            // _transform.position = new Vector2(Random.Range(-5.0f, 5.0f), Random.Range(7f, 12f));
+        }
+    }
+    
+    #region GameStateHandling
 
+    // EventHandlers
     private void RegisterEventHandlers()
     {
         GM.OnStateChange += OnStateChangeHandler;
@@ -49,8 +68,6 @@ public class EntityController : MonoBehaviour
     {
         GM.OnStateChange -= OnStateChangeHandler;
     }
-    
-    // EventHandlers
     protected void OnStateChangeHandler(GameState oldState, GameState newState)
     {
         // Debug.Log($"Switched to GM.GameState: {GM.GameState}");
@@ -91,15 +108,7 @@ public class EntityController : MonoBehaviour
     {
         // TODO: throw new NotImplementedException();
     }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        // Debug.Log($"Collision detected. other: {other}");
-        if (other.gameObject.GetComponent<PlayerController>())
-        {
-            _transform.position = new Vector2(Random.Range(-5.0f, 5.0f), Random.Range(7f, 12f));
-        }
-    }
+    #endregion
     
     protected virtual void OnDestroy()
     {

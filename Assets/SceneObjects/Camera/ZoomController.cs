@@ -8,7 +8,11 @@ public class ZoomController : MonoBehaviour
     [SerializeField] private float zoomedIn  =  5.0f;
     [SerializeField] private float zoomedOut = 10.0f;
     private Camera _camera;
+    private GameObject _player;
     [SerializeField] private float zoomSpeed = 0;
+
+    private Vector2 _offset;
+    private Vector3 _newPos;
 
     // Start is called before the first frame update
     protected void Awake()
@@ -18,10 +22,18 @@ public class ZoomController : MonoBehaviour
 
     private void InitializeEntityFields()
     {
+        _player = GameObject.Find("Player");
         _camera = Camera.main;
+        _offset = (Vector2)transform.position - (Vector2)_player.transform.position;
         GM = GameManager.Instance;
     }
-    
+
+    private void Update()
+    {
+        _newPos = (Vector2)_player.transform.position + (Vector2)_offset;
+        transform.position = new Vector3(_newPos.x * 0.5f, _newPos.y * 0.5f, transform.position.z);
+    }
+
     private void OnEnable()
     {
         RegisterEventHandlers();

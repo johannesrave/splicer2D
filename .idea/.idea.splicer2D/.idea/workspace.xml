@@ -22,220 +22,24 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc8ac25f-bb58-4998-a781-3646a64a0fdf" name="Default Changelist" comment="TextMesh and Surge, in case project needs to be recreated">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.splicer2D/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.splicer2D/.idea/contentModel.xml" afterDir="false" />
+    <list default="true" id="fc8ac25f-bb58-4998-a781-3646a64a0fdf" name="Default Changelist" comment="Working player-movement on generated path&#10;Rotation still wrong, unoptimized.">
+      <change afterPath="$PROJECT_DIR$/Assets/SceneObjects/Entity/Resources/EntityManager.asset.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.splicer2D/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.splicer2D/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GUI/Canvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GUI/Canvas.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Chooser.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Chooser/Chooser.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Chooser/Chooser.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Chooser/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Chooser/Editor/ChooserEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Chooser/Editor/ChooserEditor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Chooser/Interfaces.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Chooser/Interfaces/IChooser.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Chooser/Interfaces/IChooser.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/ColliderButton.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/ColliderButton/ColliderButton.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/ColliderButton/ColliderButton.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/ColliderButton/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/ColliderButton/Editor/ColliderButtonEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/ColliderButton/Editor/ColliderButtonEditor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/ColliderButton/Utilities.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/ColliderButton/Utilities/ColliderButtonInteraction.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/ColliderButton/Utilities/ColliderButtonInteraction.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/ColliderButton/Utilities/ColliderButtonSelector.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/ColliderButton/Utilities/ColliderButtonSelector.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/DisplayObject.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/DisplayObject/DisplayObject.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/DisplayObject/DisplayObject.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/DisplayObject/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/DisplayObject/Editor/DisplayObjectEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/DisplayObject/Editor/DisplayObjectEditor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Editor/InitializationRequirements.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Editor/InitializationRequirements.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Events.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Events/Events.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Events/Events.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/License.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/License.txt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/ReadMe.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/ReadMe.txt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Singleton.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Singleton/Singleton.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Singleton/Singleton.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Spline.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Spline/Art.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Spline/Art/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Spline/Art/Materials/Node.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Spline/Art/Materials/Node.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Spline/Art/Models.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Spline/Art/Models/Node.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Spline/Art/Models/Node/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Spline/Art/Models/Node/Materials/Node.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Spline/Art/Models/Node/Materials/Node.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Spline/Art/Models/Node/Node.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Spline/Art/Models/Node/Node.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Spline/Art/Models/ScaleNode.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Spline/Art/Models/ScaleNode/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Spline/Art/Models/ScaleNode/Materials/ScaleNode.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Spline/Art/Models/ScaleNode/Materials/ScaleNode.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Spline/Art/Models/ScaleNode/ScaleNode.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Spline/Art/Models/ScaleNode/ScaleNode.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Spline/Art/Shaders.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Spline/Art/Shaders/Invisible.shader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Spline/Art/Shaders/Invisible.shader.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Spline/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Spline/Editor/SplineAnchorEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Spline/Editor/SplineAnchorEditor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Spline/Editor/SplineEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Spline/Editor/SplineEditor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Spline/Editor/SplineTangentEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Spline/Editor/SplineTangentEditor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Spline/Objects.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Spline/Objects/BezierCurves.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Spline/Objects/BezierCurves.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Spline/Objects/CurveDetail.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Spline/Objects/CurveDetail.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Spline/Objects/Spline.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Spline/Objects/Spline.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Spline/Objects/SplineAnchor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Spline/Objects/SplineAnchor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Spline/Objects/SplineFollower.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Spline/Objects/SplineFollower.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Spline/Objects/SplineTangent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Spline/Objects/SplineTangent.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Spline/Resources.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Spline/Resources/Anchor.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Spline/Resources/Anchor.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Spline/Resources/SplineRenderer.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Spline/Resources/SplineRenderer.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Spline/Utilities.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Spline/Utilities/SplineControlledParticleSystem.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Spline/Utilities/SplineControlledParticleSystem.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Spline/Utilities/SplineRenderer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Spline/Utilities/SplineRenderer.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/StateMachine.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/StateMachine/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/StateMachine/Editor/StateEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/StateMachine/Editor/StateEditor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/StateMachine/Editor/StateMachineEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/StateMachine/Editor/StateMachineEditor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/StateMachine/State.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/StateMachine/State.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/StateMachine/StateMachine.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/StateMachine/StateMachine.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/Helpers.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/Helpers/TweenBase.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/Helpers/TweenBase.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/Helpers/TweenEngine.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/Helpers/TweenEngine.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/Helpers/TweenUtilities.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/Helpers/TweenUtilities.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/Tween.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/Tween.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/AnchoredPosition.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/AnchoredPosition.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/CameraBackgroundColor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/CameraBackgroundColor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/CanvasGroupAlpha.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/CanvasGroupAlpha.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/FieldOfView.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/FieldOfView.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/ImageColor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/ImageColor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/LightColor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/LightColor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/LightIntensity.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/LightIntensity.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/LightRange.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/LightRange.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/LocalPosition.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/LocalPosition.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/LocalRotation.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/LocalRotation.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/LocalScale.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/LocalScale.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/PanStereo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/PanStereo.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/Pitch.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/Pitch.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/Position.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/Position.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/RawImageColor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/RawImageColor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/Rotate.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/Rotate.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/Rotation.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/Rotation.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/ShaderColor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/ShaderColor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/ShaderFloat.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/ShaderFloat.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/ShaderInt.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/ShaderInt.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/ShaderVector.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/ShaderVector.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/ShakePosition.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/ShakePosition.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/Size.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/Size.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/SplinePercentage.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/SplinePercentage.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/SpriteRendererColor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/SpriteRendererColor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/TextColor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/TextColor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/TextMeshColor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/TextMeshColor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/ValueColor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/ValueColor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/ValueFloat.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/ValueFloat.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/ValueInt.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/ValueInt.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/ValueRect.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/ValueRect.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/ValueVector2.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/ValueVector2.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/ValueVector3.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/ValueVector3.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/ValueVector4.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/ValueVector4.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/Volume.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Tween/TweenActions/Volume.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Utilities.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Utilities/EditorUtilities.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Utilities/EditorUtilities.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Utilities/Initialization.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Utilities/Initialization.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Utilities/LayerMaskHelper.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Utilities/LayerMaskHelper.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Utilities/Math.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Pixelplacement/Surge/Utilities/Math.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SceneObjects/Camera/ZoomController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/Camera/ZoomController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SceneObjects/Entity/EntityController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/Entity/EntityController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SceneObjects/Entity/EntityManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/Entity/EntityManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SceneObjects/GameManager/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/GameManager/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SceneObjects/Entity/Resources.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SceneObjects/Entity/Resources/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/Entity/Resources/Enemy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SceneObjects/GameManager/EntityManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/Entity/Resources/EntityManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SceneObjects/GameManager/EntityManager.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SceneObjects/GameManager/GameManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/GameManager/GameManager.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SceneObjects/GameManager/GameManagerAsset.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/GameManager/GameManagerAsset.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SceneObjects/GameManager/InitGameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/GameManager/InitGameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SceneObjects/Player/Art/Path.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SceneObjects/Player/Art/Path.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SceneObjects/Player/Art/Player.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SceneObjects/Player/Art/Player.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SceneObjects/Player/PathController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/Player/PathController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SceneObjects/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/Player/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SceneObjects/Player/PlayerData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/Player/PlayerData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SceneObjects/Player/PlayerController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/Player/PlayerController.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Concept/splicer2D_test.mdj" beforeDir="false" afterPath="$PROJECT_DIR$/Concept/splicer2D_test.mdj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/splicer2D.apk" beforeDir="false" afterPath="$PROJECT_DIR$/splicer2D.apk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/splicer2D.sln" beforeDir="false" afterPath="$PROJECT_DIR$/splicer2D.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/splicer2D_02.sln" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -260,11 +64,13 @@
         <option value="$PROJECT_DIR$/Assets/PathCreator/Examples/Scripts/PathPlacer.cs" />
         <option value="$PROJECT_DIR$/Assets/PathCreator/Core/Runtime/Objects/PathCreator.cs" />
         <option value="$PROJECT_DIR$/Assets/SceneObjects/Player/PathController.cs" />
-        <option value="$PROJECT_DIR$/Assets/SceneObjects/Entity/EntityManager.cs" />
         <option value="$PROJECT_DIR$/Assets/SceneObjects/GameManager/GameManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/SceneObjects/Entity/EntityController.cs" />
         <option value="$PROJECT_DIR$/Assets/SceneObjects/Player/PlayerData.cs" />
+        <option value="$PROJECT_DIR$/Assets/PathCreator/Core/Runtime/Objects/VertexPath.cs" />
+        <option value="$PROJECT_DIR$/Assets/SceneObjects/Camera/ZoomController.cs" />
+        <option value="$PROJECT_DIR$/Assets/SceneObjects/Entity/EntityController.cs" />
         <option value="$PROJECT_DIR$/Assets/SceneObjects/Player/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/SceneObjects/Entity/EntityManager.cs" />
       </list>
     </option>
   </component>
@@ -310,7 +116,7 @@
       <option name="presentableId" value="Default" />
       <updated>1600892823762</updated>
       <workItem from="1600892837489" duration="293000" />
-      <workItem from="1600893540843" duration="36706000" />
+      <workItem from="1600893540843" duration="51739000" />
     </task>
     <task id="LOCAL-00001" summary="CameraController can now zoom in and zoom out based on click and event">
       <created>1600892940410</created>
@@ -326,7 +132,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600893067532</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Working player-movement on generated path&#10;Rotation still wrong, unoptimized.">
+      <created>1600991179567</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1600991179567</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -350,9 +163,18 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="CameraController can now zoom in and zoom out based on click and event" />
     <MESSAGE value="TextMesh and Surge, in case project needs to be recreated" />
-    <option name="LAST_COMMIT_MESSAGE" value="TextMesh and Surge, in case project needs to be recreated" />
+    <MESSAGE value="Working player-movement on generated path&#10;Rotation still wrong, unoptimized." />
+    <option name="LAST_COMMIT_MESSAGE" value="Working player-movement on generated path&#10;Rotation still wrong, unoptimized." />
   </component>
   <component name="WindowStateProjectService">
+    <state x="1047" y="424" key="RiderGenerateDialog" timestamp="1600992791162">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1047" y="424" key="RiderGenerateDialog/2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1600992791162" />
+    <state x="92" y="92" width="2376" height="1216" key="VCS.FileHistoryDialog" timestamp="1600991247876">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="92" y="92" width="2376" height="1216" key="VCS.FileHistoryDialog/2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1600991247876" />
     <state x="2553" y="0" width="1294" height="1407" key="dock-window-1" timestamp="1600985429270">
       <screen x="2560" y="0" width="2560" height="1400" />
     </state>
@@ -361,9 +183,10 @@
       <screen x="2560" y="0" width="2560" height="1400" />
     </state>
     <state x="3507" y="299" width="666" height="801" key="find.popup/2560.0.2560.1400/0.0.2560.1400@2560.0.2560.1400" timestamp="1600976442914" />
-    <state x="3503" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1600975774529">
-      <screen x="2560" y="0" width="2560" height="1400" />
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1601066996907">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup/2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1601066996907" />
     <state x="3503" y="315" width="672" height="678" key="search.everywhere.popup/2560.0.2560.1400/0.0.2560.1400@2560.0.2560.1400" timestamp="1600975774529" />
   </component>
 </project>

@@ -5,7 +5,7 @@ MonoImporter:
   serializedVersion: 2
   defaultReferences:
   - data: {fileID: 11400000, guid: 1b2d9c3c276748547936796e67784c3f, type: 2}
-  - EM: {fileID: 11400000, guid: 1239a5c175fa13d4787dbc257f3596c4, type: 2}
+  - entityManager: {fileID: 11400000, guid: 9d19668c3e904c3581066bafaa520134, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

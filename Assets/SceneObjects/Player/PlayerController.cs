@@ -1,29 +1,29 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using PathCreation;
-using TreeEditor;
 using UnityEngine;
 
 public class PlayerController : EntityController
 {
-    //private PathController _path;
+    // General variables
     private Camera _camera;
-
-    private Vector2 _offset;
     private bool _draggingPlayer = false;
-    private bool _draggingPath = false;
+    private LineRenderer _lineRenderer;
+    [SerializeField] private float speed = 5.0f;
+
+    // Mouse variables
+    private Vector2 _offset;
     private float newTime;
     private double oldTime = 0;
     private double _maxdelay = 0.25f;
-    private float time;
-    [SerializeField] private PlayerData _data;
     
+    // Path variables
     [SerializeField] private GameObject pathPrefab;
     private GameObject _path;
     private PathCreator _pathcreator;
-
     private List<Vector2> waypoints = new List<Vector2>();
+    
+    // Movement variables
     [SerializeField] private float sliceTime = 0.2f;
     [SerializeField] private float spacing = 1.0f;
     private float distanceTravelled;
@@ -38,10 +38,10 @@ public class PlayerController : EntityController
     private void InitializeFields()
     {
         _path = Instantiate<GameObject>(pathPrefab);
+        _lineRenderer = GetComponent<LineRenderer>();
         _pathcreator = _path.GetComponent<PathCreator>();
         _path.SetActive(false);
         _camera = Camera.main;
-        _data = Instantiate(_data);
     }
 
     protected override void OnPathState()
@@ -67,15 +67,21 @@ public class PlayerController : EntityController
         while (distanceTravelled < _pathcreator.path.length)
         {
             Debug.Log($"Distance travelled: {distanceTravelled}");
-            //todo move player on path
+            // TODO: move player on path
             
-            distanceTravelled += _data.speed * Time.deltaTime;
-            transform.position = _pathcreator.path.GetPointAtDistance(distanceTravelled, EndOfPathInstruction.Stop);
-            transform.rotation = _pathcreator.path.GetRotationAtDistance(distanceTravelled, EndOfPathInstruction.Stop);
+            distanceTravelled += speed * Time.deltaTime;
+            var targetPos = _pathcreator.path.GetPointAtDistance(distanceTravelled, EndOfPathInstruction.Stop);
+            transform.position = targetPos;
+            var targetRot = _pathcreator.path.GetRotationAtDistance(distanceTravelled, EndOfPathInstruction.Stop);
+            targetRot.SetLookRotation(Vector3.forward, Vector3.up);
+            
+            transform.rotation = targetRot;
             
             yield return null;
         }
 
+        distanceTravelled = 0;
+        _lineRenderer.positionCount = 0;
         GM.GameState = GameState.PLAY;
     }
 
@@ -93,21 +99,29 @@ public class PlayerController : EntityController
             Vector2 finalPt = (Vector2) _camera.ScreenToWorldPoint(Input.mousePosition) - _offset;
             waypoints[waypoints.Count-1] = finalPt;
 
-            Debug.Log(Vector2.Distance(prevPt, finalPt) + ">" + spacing);
+            // Debug.Log(Vector2.Distance(prevPt, finalPt) + ">" + spacing);
             // If current and second to last points are far enough apart,
             // add current position to waypoints         
             if (Vector2.Distance(prevPt, finalPt) > spacing)
             {
                 waypoints.Add(finalPt);
-                waypoints.ForEach(pt => GM.DebugSphere(pt));
+                //waypoints.ForEach(pt => GM.DebugSphere(pt));
             }
-
             
             // Create a new bezier path from the waypoints.
             if (waypoints.Count > 0) {
                 BezierPath bezierPath = new BezierPath (waypoints, false, PathSpace.xy);
                 _pathcreator.bezierPath = bezierPath;
             }
+
+            for (var index = 0; index < _pathcreator.path.localPoints.Length; index++)
+            {
+                var point = _pathcreator.path.localPoints[index];
+            }
+
+            _lineRenderer.positionCount = _pathcreator.path.NumPoints-1;
+            _lineRenderer.SetPositions(_pathcreator.path.localPoints);
+
             yield return new WaitForSeconds(sliceTime);
         }
     }
@@ -120,7 +134,6 @@ public class PlayerController : EntityController
         if (IsDoubleClick())
         {
             GM.GameState = GameState.PATH;
-            _draggingPath = true;
         }
         else
         {
