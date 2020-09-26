@@ -7,12 +7,14 @@ public class ZoomController : MonoBehaviour
     private GameManager GM;
     [SerializeField] private float zoomedIn  =  5.0f;
     [SerializeField] private float zoomedOut = 10.0f;
+    [SerializeField] private float movementFactor = 0.5f;
     private Camera _camera;
     private GameObject _player;
     [SerializeField] private float zoomSpeed = 0;
 
     private Vector2 _offset;
     private Vector3 _newPos;
+    private float _zoomFactor;
 
     // Start is called before the first frame update
     protected void Awake()
@@ -30,8 +32,13 @@ public class ZoomController : MonoBehaviour
 
     private void Update()
     {
-        _newPos = (Vector2)_player.transform.position + (Vector2)_offset;
-        transform.position = new Vector3(_newPos.x * 0.5f, _newPos.y * 0.5f, transform.position.z);
+        _zoomFactor = (zoomedOut - _camera.orthographicSize) / zoomedIn; 
+        _newPos = ((Vector2) _player.transform.position + (Vector2) _offset) * (movementFactor * _zoomFactor);
+        transform.position = new Vector3(_newPos.x, _newPos.y, transform.position.z);
+
+        // _newPos.x = _player.transform.position.x - _camera.orthographicSize*9/16;
+        // _newPos.y = _player.transform.position.y - _camera.orthographicSize;
+        // transform.position = new Vector3(_newPos.x * movementFactor, _newPos.y * movementFactor, transform.position.z);
     }
 
     private void OnEnable()

@@ -10,6 +10,7 @@ public class PlayerController : EntityController
     private bool _draggingPlayer = false;
     private LineRenderer _lineRenderer;
     [SerializeField] private float speed = 5.0f;
+    public int health = 100;
 
     // Mouse variables
     private Vector2 _offset;
@@ -28,13 +29,16 @@ public class PlayerController : EntityController
     [SerializeField] private float spacing = 1.0f;
     private float distanceTravelled;
 
-    // Events
+    
+    public delegate void OnDamageHandler(GameObject player, GameObject other);
+    public event OnDamageHandler DamageTaken;
+
     private new void Awake()
     {
         base.Awake();
         InitializeFields();
     }
-
+    
     private void InitializeFields()
     {
         _path = Instantiate<GameObject>(pathPrefab);
@@ -43,7 +47,66 @@ public class PlayerController : EntityController
         _path.SetActive(false);
         _camera = Camera.main;
     }
+    #region Events
 
+    protected override void OnTriggerEnter2D(Collider2D other)
+    {
+        Debug.Log($"Collision detected. other: {other}");
+        switch (other.gameObject.tag)
+        {
+            case "Enemy":
+                if (GM.GameState != GameState.ATTACK)
+                {
+                    TakeDamage(other.gameObject);
+                }
+                else
+                {
+                    health += 10;
+                }
+                break;
+            case "Obstacle": 
+                TakeDamage(other.gameObject);
+                break;
+            case "PowerUp": 
+                GetHealed(other.gameObject);
+                break;
+            default: break;
+        }
+    }
+
+    private void GetHealed(GameObject healer)
+    {
+        health += healer.GetComponent<PowerUpController>().data.healthBonus;    
+    }
+
+    private void TakeDamage(GameObject damager)
+    {
+        DamageTaken?.Invoke(this.gameObject, damager);
+        switch (damager.gameObject.tag)
+        {
+            case "Enemy":
+                health -= damager.GetComponent<EnemyController>().data.damage;
+                break;
+            case "Obstacle":
+                health -= damager.GetComponent<ObstacleController>().data.damage;
+                break;
+        }
+
+        if (health < 1)
+        {
+            Destroy(this.gameObject);
+            // Die();
+        }
+    }
+
+    private void Die()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    #endregion
+
+    #region StateManagement
     protected override void OnPathState()
     {
         StartCoroutine(DrawPath());
@@ -59,28 +122,34 @@ public class PlayerController : EntityController
     {
         StartCoroutine(MovePlayerOnPath());
     }
-
+    #endregion
+    
     #region Coroutines
     private IEnumerator MovePlayerOnPath()
     {
-        Debug.Log("Moving Player on path.");
+        Vector3 pos;
+        Vector3 dir;
+        Quaternion rot = new Quaternion();
+        // Debug.Log("Moving Player on path.");
         while (distanceTravelled < _pathcreator.path.length)
         {
-            Debug.Log($"Distance travelled: {distanceTravelled}");
+            // Debug.Log($"Distance travelled: {distanceTravelled}");
             // TODO: move player on path
             
             distanceTravelled += speed * Time.deltaTime;
-            var targetPos = _pathcreator.path.GetPointAtDistance(distanceTravelled, EndOfPathInstruction.Stop);
-            transform.position = targetPos;
-            var targetRot = _pathcreator.path.GetRotationAtDistance(distanceTravelled, EndOfPathInstruction.Stop);
-            targetRot.SetLookRotation(Vector3.forward, Vector3.up);
-            
-            transform.rotation = targetRot;
+            pos = _pathcreator.path.GetPointAtDistance(distanceTravelled, EndOfPathInstruction.Stop);
+            transform.position = pos;
+            rot = _pathcreator.path.GetRotationAtDistance(distanceTravelled, EndOfPathInstruction.Stop);
+            dir = _pathcreator.path.GetDirectionAtDistance(distanceTravelled);
+            rot.SetLookRotation(Vector3.back, dir);//*******
+            transform.rotation = rot;
             
             yield return null;
         }
 
         distanceTravelled = 0;
+        rot.SetLookRotation(Vector3.back, Vector3.up);
+        transform.rotation = rot;
         _lineRenderer.positionCount = 0;
         GM.GameState = GameState.PLAY;
     }

@@ -16,8 +16,11 @@ MonoBehaviour:
   obstacle: {fileID: 5270188336237179960, guid: bd2f1d062eab62b42bf693680282cc8d, type: 3}
   powerup: {fileID: 5270188336237179960, guid: a5e2bb6972fed76499114a7c86a63c31, type: 3}
   maxEnemies: 5
-  maxObstacles: 0
-  maxPowerups: 0
-  spawnThreshold: 2.03
+  maxObstacles: 8
+  maxPowerups: 3
+  spawnThreshold: 1.5
   gridRows: 12
   gridColumns: 4
+  spawnBoxX: 6
+  spawnBoxLowerY: 3
+  spawnBoxUpperY: 10

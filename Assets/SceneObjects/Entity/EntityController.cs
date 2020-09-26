@@ -4,29 +4,27 @@ using System.Data;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-[RequireComponent(typeof(CircleCollider2D),typeof(BoxCollider2D),typeof(SpriteRenderer))]
-public class EntityController : MonoBehaviour
+[RequireComponent(typeof(BoxCollider2D),typeof(SpriteRenderer))]
+public abstract class EntityController : MonoBehaviour
 {
-    [SerializeField] protected EntityData data; //--> implemented in derived classes
     [SerializeField] protected Movement movement;
     protected GameManager GM;
     protected Transform _transform;
-    private SpriteRenderer _renderer;
+    protected SpriteRenderer _renderer;
     protected Collider2D _collider;
-    private CircleCollider2D _spawnCollider;
-    //private EntityData _data;
+    // private CircleCollider2D _spawnCollider;
     
-    protected void Awake()
+    protected virtual void Awake()
     {
         InitializeEntityFields();
     }
 
-    private void OnEnable()
+    protected virtual void OnEnable()
     {
         RegisterEventHandlers();
     }
 
-    private void OnDisable()
+    protected virtual void OnDisable()
     {
         DeregisterEventHandlers();
     }
@@ -37,25 +35,20 @@ public class EntityController : MonoBehaviour
         GM = GameManager.Instance;
         _transform = gameObject.transform;
         _collider = GetComponent<BoxCollider2D>();
-        _spawnCollider = GetComponent<CircleCollider2D>();
+        // _spawnCollider = GetComponent<CircleCollider2D>();
         _renderer = GetComponent<SpriteRenderer>();
-        data = Instantiate(data);
     }
     
     public delegate void OnHitHandler(GameObject hitEntity);
-    public event OnHitHandler OnEntityHit;
-    
-    
-    private void OnTriggerEnter2D(Collider2D other)
+    public event OnHitHandler EntityHit;
+
+    protected void OnEntitityHit()
     {
-        // Debug.Log($"Collision detected. other: {other}");
-        if (other.gameObject.GetComponent<PlayerController>())
-        {
-            OnEntityHit?.Invoke(gameObject);
-            // _transform.position = new Vector2(Random.Range(-5.0f, 5.0f), Random.Range(7f, 12f));
-        }
+        EntityHit?.Invoke(this.gameObject);
     }
     
+    protected abstract void OnTriggerEnter2D(Collider2D other);
+
     #region GameStateHandling
 
     // EventHandlers

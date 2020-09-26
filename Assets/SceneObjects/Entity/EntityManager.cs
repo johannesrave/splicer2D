@@ -62,19 +62,20 @@ public class EntityManager : SingletonScriptableObject<EntityManager>
 
     private void FillUpSingleList(ICollection<GameObject> collection, GameObject entity, int maxNumber)
     {
+        Transform parent = GameObject.Find("InitGameManager").transform;
         // Debug.Log($"Filling up {collection} of {entity}");
         for (int i = collection.Count; i < maxNumber; i++)
         {
-            var newEntity = Instantiate(entity, GameObject.Find("InitGameManager").transform, true);
+            var newEntity = Instantiate(entity, parent, true);
             MoveEntityToFreeSpot(newEntity);
             RegisterToHitEventOf(newEntity);
             collection.Add(newEntity);
         }
     }
 
-    private void RegisterToHitEventOf(GameObject newEntity)
+    private void RegisterToHitEventOf(GameObject entity)
     {
-        newEntity.GetComponent<EntityController>().OnEntityHit += MoveEntityToFreeSpot;
+        entity.GetComponent<EntityController>().EntityHit += MoveEntityToFreeSpot;
     }
 
     private void MoveEntityToFreeSpot(GameObject hitEntity)
@@ -83,7 +84,7 @@ public class EntityManager : SingletonScriptableObject<EntityManager>
         int tries = 10;
         
         while (!FindSpawnPoint(out randomPosition) && tries > 0) { tries--; }
-        Debug.Log($"Free spot at {randomPosition}");
+        // Debug.Log($"Free spot at {randomPosition}");
         hitEntity.transform.position = randomPosition;    }
 
 
@@ -95,23 +96,17 @@ public class EntityManager : SingletonScriptableObject<EntityManager>
             
             foreach (var item in collection)
             {
-                Debug.Log($"distance of {Vector2.Distance(item.transform.position, pos)} to object {item}");
+                // Debug.Log($"distance of {Vector2.Distance(item.transform.position, pos)} to object {item}");
 
                 if (spawnThreshold > Vector2.Distance(item.transform.position, pos))
                 {
-                    Debug.Log($"collision with item at {item.transform.position}");
+                    // Debug.Log($"collision with item at {item.transform.position}");
                     return false;
                 }
             }
 
-            Debug.Log($"No collision found in {collection}");
+            // Debug.Log($"No collision found in {collection}");
         }
         return true;
-    }
-
-    public void RemoveFromList(GameObject gameObject)
-    {
-        _entities.ForEach(list => list.Remove(gameObject));
-        
     }
 }
