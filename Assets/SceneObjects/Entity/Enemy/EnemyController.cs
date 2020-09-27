@@ -11,7 +11,7 @@ public class EnemyController : EntityController
     }
     private void Update()
     {
-        movement.Move(gameObject, data.maxSpeed * GM.data.globalSpeed);
+        movement.Move(gameObject, data.maxSpeed);
     }
 
     protected override void OnTriggerEnter2D(Collider2D other)
@@ -21,7 +21,7 @@ public class EnemyController : EntityController
         {
             OnEntitityHit();
         }
-        else if (other.gameObject.name == "Player" && GM.GameState == GameState.ATTACK)
+        else if (other.gameObject.name == "Player" && GM.GameState == GM.AttackState)
         {
             OnEntitityHit();
         }

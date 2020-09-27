@@ -11,7 +11,7 @@ public class PowerUpController : EntityController
     }
     private void Update()
     {
-        movement.Move(gameObject, data.maxSpeed * GM.data.globalSpeed);
+        movement.Move(gameObject, data.maxSpeed);
     }
 
     protected override void OnTriggerEnter2D(Collider2D other)

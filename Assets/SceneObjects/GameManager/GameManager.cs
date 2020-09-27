@@ -3,52 +3,62 @@ using System.Collections;
 using UnityEditor;
 using UnityEngine.Playables;
 
-[CreateAssetMenu(fileName = "GameManagerAsset", menuName = "GameManager", order = 0)]
-public class GameManager : SingletonScriptableObject<GameManager>
+namespace DefaultNamespace
 {
-    private GameManager() { }
-    
-    public GameData data;
-    public EntityManager entityManager;
-
-    private static GameState _gameState;
-    private static GameState _startState;
-    private static GameState _playState;
-    private static GameState _pathState;
-    private static GameState _attackState;
-
-    public delegate void OnStateChangeHandler(GameState prevGS, GameState newGS);
-    public event OnStateChangeHandler OnStateChange;
-
-    public void Awake()
+    [CreateAssetMenu(fileName = "GameManagerAsset", menuName = "ScriptableObject/GameManager", order = 0)]
+    public class GameManager : SingletonScriptableObject<GameManager>
     {
-        Debug.Log("Initializing GameManager");
-        _gameState = GameState.START;
-        LoadResources();
-        GameState = GameState.PLAY;
-    }
+        private GameManager() { }
     
-    
+        public GameData data;
+        public EntityManager entityManager;
 
-    private void LoadResources()
-    {
-        Debug.Log("Trying to initialize EntityManager");
-        entityManager = Instantiate<EntityManager>(entityManager);
-    }
+        private static GameState _gameState;
+        public GameState StartState;
+        public GameState PlayState;
+        public GameState PathState;
+        public GameState AttackState;
 
-    public GameState GameState 
-    {
-        get => _gameState;
-        set
+        public delegate void OnStateChangeHandler(GameState prevGS, GameState newGS);
+        public event OnStateChangeHandler OnStateChange;
+
+        public void Awake()
         {
-            Debug.Log($"State set to {value}");
-            var oldState = _gameState;
-            _gameState = value;
-            OnStateChange?.Invoke(oldState, _gameState);
+            Debug.Log("Initializing GameManager");
+            _gameState = StartState;
+            LoadResources();
+            GameState = PlayState;
+        }
+    
+    
+
+        private void LoadResources()
+        {
+            Debug.Log("Trying to initialize EntityManager");
+            entityManager = Instantiate<EntityManager>(entityManager);
+            StartState = Instantiate<GameState>(StartState);
+            PlayState = Instantiate<GameState>(PlayState);
+            PathState = Instantiate<GameState>(PathState);
+            AttackState = Instantiate<GameState>(AttackState);
+        }
+
+        public GameState GameState 
+        {
+            get => _gameState;
+            set
+            {
+                Debug.Log($"State set to {value}");
+                var oldState = _gameState;
+                _gameState = value;
+                OnStateChange?.Invoke(oldState, _gameState);
+            }
         }
     }
 }
+
+/*
 public enum GameState
 {
     START, PLAY, PATH, ATTACK
 }
+*/

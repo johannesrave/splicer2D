@@ -51,8 +51,10 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\PathCreator\Examples\Scripts\PathSpawner.cs" />
+     <Compile Include="Assets\SceneObjects\GameManager\GameState\GameState.cs" />
      <Compile Include="Assets\SceneObjects\GUI\QuitButton.cs" />
      <Compile Include="Assets\PathCreator\Examples\Scripts\PathPlacer.cs" />
+     <Compile Include="Assets\SceneObjects\GUI\GUIController.cs" />
      <Compile Include="Assets\SceneObjects\Camera\ZoomController.cs" />
      <Compile Include="Assets\SceneObjects\Player\PathController.cs" />
      <Compile Include="Assets\SceneObjects\Entity\PowerUp\PowerUpController.cs" />
@@ -77,7 +79,6 @@
      <Compile Include="Assets\SceneObjects\Entity\Obstacle\ObstacleData.cs" />
      <Compile Include="Assets\SceneObjects\Entity\Enemy\EnemyController.cs" />
      <Compile Include="Assets\SceneObjects\Entity\EntityManager.cs" />
-     <Compile Include="Assets\SceneObjects\GUI\GUIController.cs" />
      <Compile Include="Assets\SceneObjects\Entity\Helper.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />

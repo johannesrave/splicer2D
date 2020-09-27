@@ -19,58 +19,35 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc8ac25f-bb58-4998-a781-3646a64a0fdf" name="Default Changelist" comment="work on entity manager for spawnbox&#10;todo: implement jittered spawn grid?">
-      <change afterPath="$PROJECT_DIR$/Assets/SceneObjects/Entity/Helper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SceneObjects/Entity/Helper.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/SceneObjects/GUI/GUIController.cs" afterDir="false" />
+    <list default="true" id="fc8ac25f-bb58-4998-a781-3646a64a0fdf" name="Default Changelist" comment="working viewport, working damage, working label, working damage GUI">
+      <change afterPath="$PROJECT_DIR$/Assets/SceneObjects/GameManager/GameState/GameState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.splicer2D/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.splicer2D/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.splicer2D/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.splicer2D/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GUI.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/GUI.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GUI/Canvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/GUI/Canvas.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GUI/Canvas.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/GUI/Canvas.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GUI/Fonts.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/GUI/Fonts.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GUI/Fonts/SpaceMono-Bold.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/GUI/Fonts/SpaceMono-Bold.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GUI/Fonts/SpaceMono-Bold.ttf.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/GUI/Fonts/SpaceMono-Bold.ttf.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GUI/Fonts/SpaceMono-BoldItalic SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/GUI/Fonts/SpaceMono-BoldItalic SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GUI/Fonts/SpaceMono-BoldItalic SDF.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/GUI/Fonts/SpaceMono-BoldItalic SDF.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GUI/Fonts/SpaceMono-BoldItalic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/GUI/Fonts/SpaceMono-BoldItalic.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GUI/Fonts/SpaceMono-BoldItalic.ttf.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/GUI/Fonts/SpaceMono-BoldItalic.ttf.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GUI/Fonts/SpaceMono-Italic.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/GUI/Fonts/SpaceMono-Italic.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GUI/Fonts/SpaceMono-Italic.ttf.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/GUI/Fonts/SpaceMono-Italic.ttf.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GUI/Fonts/SpaceMono-Regular.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/GUI/Fonts/SpaceMono-Regular.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GUI/Fonts/SpaceMono-Regular.ttf.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/GUI/Fonts/SpaceMono-Regular.ttf.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GUI/QuitButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/GUI/QuitButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GUI/QuitButton.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/GUI/QuitButton.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GUI/ResetButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/GUI/ResetButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GUI/ResetButton.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/GUI/ResetButton.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SceneObjects/Background.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SceneObjects/Background/Particle System.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SceneObjects/Background/Particle System.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SceneObjects/Camera/ZoomController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/Camera/ZoomController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SceneObjects/Entity/Enemy/EnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/Entity/Enemy/EnemyController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SceneObjects/Entity/Enemy/EnemyData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/Entity/Enemy/EnemyData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SceneObjects/Entity/EntityController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/Entity/EntityController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SceneObjects/Entity/EntityData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/Entity/EntityData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SceneObjects/Entity/EntityManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/Entity/EntityManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SceneObjects/Entity/EntityController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/Entity/EntityController.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SceneObjects/Entity/Movement/Movement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/Entity/Movement/Movement.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SceneObjects/Entity/Movement/MovementA.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/Entity/Movement/MovementA.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SceneObjects/Entity/Obstacle/ObstacleController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/Entity/Obstacle/ObstacleController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SceneObjects/Entity/Obstacle/ObstacleData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/Entity/Obstacle/ObstacleData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SceneObjects/Entity/PowerUp/PowerUpController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/Entity/PowerUp/PowerUpController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SceneObjects/Entity/PowerUp/PowerUpData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/Entity/PowerUp/PowerUpData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SceneObjects/Entity/Resources/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/Entity/Resources/Enemy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SceneObjects/Entity/Resources/EntityManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/Entity/Resources/EntityManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SceneObjects/Entity/Resources/Obstacle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/Entity/Resources/Obstacle.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SceneObjects/Entity/Resources/PowerUp.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/Entity/Resources/PowerUp.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SceneObjects/GameManager/GameData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/GameManager/GameData.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SceneObjects/GameManager/GameData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/GameManager/GameData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SceneObjects/GameManager/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/GameManager/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SceneObjects/GameManager/GameManagerAsset.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/GameManager/GameManagerAsset.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SceneObjects/GameManager/InitGameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/GameManager/InitGameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SceneObjects/Player/PathController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/Player/PathController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SceneObjects/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/Player/PlayerController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/splicer2D.apk" beforeDir="false" afterPath="$PROJECT_DIR$/splicer2D.apk" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -84,9 +61,15 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A9810827-DCE3-444A-8E5C-4E9F3F5E0828/d6/4f50d484/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/SceneObjects/GUI/GUIController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PathCreator/Examples/Scripts/GeneratePathExample.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -96,25 +79,27 @@
         <option value="$PROJECT_DIR$/Assets/SceneObjects/GameManager/InitGameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/PathCreator/Examples/Scripts/PathPlacer.cs" />
         <option value="$PROJECT_DIR$/Assets/PathCreator/Core/Runtime/Objects/PathCreator.cs" />
-        <option value="$PROJECT_DIR$/Assets/SceneObjects/Player/PathController.cs" />
         <option value="$PROJECT_DIR$/Assets/SceneObjects/Player/PlayerData.cs" />
         <option value="$PROJECT_DIR$/Assets/PathCreator/Core/Runtime/Objects/VertexPath.cs" />
-        <option value="$PROJECT_DIR$/Assets/SceneObjects/Camera/ZoomController.cs" />
         <option value="$PROJECT_DIR$/Assets/SceneObjects/Entity/EntityManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/SceneObjects/Entity/Movement/MovementA.cs" />
         <option value="$PROJECT_DIR$/Assets/SceneObjects/Entity/EntityData.cs" />
         <option value="$PROJECT_DIR$/Assets/SceneObjects/Entity/Enemy/EnemyData.cs" />
-        <option value="$PROJECT_DIR$/Assets/SceneObjects/Entity/EntityController.cs" />
         <option value="$PROJECT_DIR$/Assets/SceneObjects/Entity/Obstacle/ObstacleData.cs" />
         <option value="$PROJECT_DIR$/Assets/SceneObjects/Entity/PowerUp/PowerUpData.cs" />
-        <option value="$PROJECT_DIR$/Assets/SceneObjects/Player/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/SceneObjects/GUI/GUIController.cs" />
         <option value="$PROJECT_DIR$/Assets/SceneObjects/Entity/Helper.cs" />
+        <option value="$PROJECT_DIR$/Assets/SceneObjects/GameManager/GameState.cs" />
         <option value="$PROJECT_DIR$/Assets/SceneObjects/GameManager/GameData.cs" />
+        <option value="$PROJECT_DIR$/Assets/SceneObjects/GameManager/GameState/GameState.cs" />
+        <option value="$PROJECT_DIR$/Assets/SceneObjects/Player/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/SceneObjects/Player/PathController.cs" />
+        <option value="$PROJECT_DIR$/Assets/SceneObjects/Camera/ZoomController.cs" />
+        <option value="$PROJECT_DIR$/Assets/SceneObjects/GameManager/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/SceneObjects/Entity/Obstacle/ObstacleController.cs" />
         <option value="$PROJECT_DIR$/Assets/SceneObjects/Entity/Enemy/EnemyController.cs" />
         <option value="$PROJECT_DIR$/Assets/SceneObjects/Entity/PowerUp/PowerUpController.cs" />
-        <option value="$PROJECT_DIR$/Assets/SceneObjects/Entity/Obstacle/ObstacleController.cs" />
-        <option value="$PROJECT_DIR$/Assets/SceneObjects/GameManager/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/SceneObjects/Entity/EntityController.cs" />
+        <option value="$PROJECT_DIR$/Assets/SceneObjects/Entity/Movement/MovementA.cs" />
       </list>
     </option>
   </component>
@@ -160,7 +145,7 @@
       <option name="presentableId" value="Default" />
       <updated>1600892823762</updated>
       <workItem from="1600892837489" duration="293000" />
-      <workItem from="1600893540843" duration="72021000" />
+      <workItem from="1600893540843" duration="77933000" />
     </task>
     <task id="LOCAL-00001" summary="CameraController can now zoom in and zoom out based on click and event">
       <created>1600892940410</created>
@@ -190,7 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601068786894</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="working viewport, working damage, working label, working damage GUI">
+      <created>1601159880521</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1601159880521</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,7 +195,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -216,7 +220,8 @@
     <MESSAGE value="TextMesh and Surge, in case project needs to be recreated" />
     <MESSAGE value="Working player-movement on generated path&#10;Rotation still wrong, unoptimized." />
     <MESSAGE value="work on entity manager for spawnbox&#10;todo: implement jittered spawn grid?" />
-    <option name="LAST_COMMIT_MESSAGE" value="work on entity manager for spawnbox&#10;todo: implement jittered spawn grid?" />
+    <MESSAGE value="working viewport, working damage, working label, working damage GUI" />
+    <option name="LAST_COMMIT_MESSAGE" value="working viewport, working damage, working label, working damage GUI" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1047" y="424" key="RiderGenerateDialog" timestamp="1600992791162">
@@ -228,10 +233,10 @@
     </state>
     <state x="92" y="92" width="2376" height="1216" key="VCS.FileHistoryDialog/2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1600991247876" />
     <state x="2652" y="92" width="2376" height="1216" key="VCS.FileHistoryDialog/2560.0.2560.1400/0.0.2560.1400@2560.0.2560.1400" timestamp="1601121222232" />
-    <state x="872" y="433" key="Vcs.Push.Dialog.v2" timestamp="1601068804927">
+    <state x="872" y="433" key="Vcs.Push.Dialog.v2" timestamp="1601159937037">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="872" y="433" key="Vcs.Push.Dialog.v2/2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1601068804927" />
+    <state x="872" y="433" key="Vcs.Push.Dialog.v2/2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1601159937037" />
     <state x="2553" y="0" width="1294" height="1407" key="dock-window-1" timestamp="1600985429270">
       <screen x="2560" y="0" width="2560" height="1400" />
     </state>
@@ -240,10 +245,10 @@
       <screen x="2560" y="0" width="2560" height="1400" />
     </state>
     <state x="3507" y="299" width="666" height="801" key="find.popup/2560.0.2560.1400/0.0.2560.1400@2560.0.2560.1400" timestamp="1600976442914" />
-    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1601066996907">
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1601163444143">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup/2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1601066996907" />
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup/2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1601163444143" />
     <state x="3503" y="315" width="672" height="678" key="search.everywhere.popup/2560.0.2560.1400/0.0.2560.1400@2560.0.2560.1400" timestamp="1600975774529" />
   </component>
 </project>

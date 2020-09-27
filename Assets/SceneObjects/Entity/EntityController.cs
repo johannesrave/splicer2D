@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections;
-using System.Data;
+﻿using DefaultNamespace;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
 [RequireComponent(typeof(BoxCollider2D),typeof(SpriteRenderer))]
 public abstract class EntityController : MonoBehaviour
@@ -64,21 +61,24 @@ public abstract class EntityController : MonoBehaviour
     protected void OnStateChangeHandler(GameState oldState, GameState newState)
     {
         // Debug.Log($"Switched to GM.GameState: {GM.GameState}");
-        switch (newState)
+        if (newState == GM.StartState)
         {
-            case GameState.START:
-                OnStartState(); 
-                break; 
-            case GameState.PLAY: 
-                OnPlayState();
-                break; 
-            case GameState.PATH: 
-                OnPathState();
-                break; 
-            case GameState.ATTACK: 
-                OnAttackState();
-                break; 
-            default: break; 
+            OnStartState();
+        }
+        else if (newState == GM.PlayState)
+        {
+            OnPlayState();
+        }
+        else if (newState == GM.PathState)
+        {
+            OnPathState();
+        }
+        else if (newState == GM.AttackState)
+        {
+            OnAttackState();
+        }
+        else
+        {
         }
     }
 

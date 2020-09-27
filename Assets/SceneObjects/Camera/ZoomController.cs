@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using DefaultNamespace;
 using UnityEngine;
 
 public class ZoomController : MonoBehaviour
@@ -24,10 +25,10 @@ public class ZoomController : MonoBehaviour
 
     private void InitializeEntityFields()
     {
+        GM = GameManager.Instance;
         _player = GameObject.Find("Player");
         _camera = Camera.main;
         _offset = (Vector2)transform.position - (Vector2)_player.transform.position;
-        GM = GameManager.Instance;
     }
 
     private void Update()
@@ -65,18 +66,17 @@ public class ZoomController : MonoBehaviour
     // EventHandlers
     protected void OnStateChangeHandler(GameState oldState, GameState newState)
     {
-        switch (newState)
+        if (newState == GM.StartState)
         {
-            case GameState.START:
-                OnStartState(); 
-                break; 
-            case GameState.PLAY: 
-                OnPlayState();
-                break; 
-            case GameState.PATH: 
-                OnPathState();
-                break; 
-            default: break; 
+            OnStartState();
+        }
+        else if (newState == GM.PlayState)
+        {
+            OnPlayState();
+        }
+        else if (newState == GM.PathState)
+        {
+            OnPathState();
         }
     }
 
@@ -88,7 +88,7 @@ public class ZoomController : MonoBehaviour
     private IEnumerator ZoomOut()
     {
         var zoom = _camera.orthographicSize;
-        while (zoom < zoomedOut && GM.GameState == GameState.PATH)
+        while (zoom < zoomedOut && GM.GameState == GM.PathState)
         {
             // Debug.Log($"zoom: {zoom}, zoomedOut: {zoomedOut}, GM.GameState: {GM.GameState}");
             // Debug.Log(zoom < zoomedOut && GM.GameState == GameState.PATH);
@@ -106,7 +106,7 @@ public class ZoomController : MonoBehaviour
     private IEnumerator ZoomIn()
     {
         var zoom = _camera.orthographicSize;
-        while (zoom > zoomedIn && GM.GameState == GameState.PLAY)
+        while (zoom > zoomedIn && GM.GameState == GM.PlayState)
         {
             // Debug.Log($"zoom: {zoom}, zoomedIn: {zoomedIn}, GM.GameState: {GM.GameState}");
             // Debug.Log(zoom > zoomedIn && GM.GameState == GameState.PLAY);

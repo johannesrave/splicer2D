@@ -55,7 +55,7 @@ public class PlayerController : EntityController
         switch (other.gameObject.tag)
         {
             case "Enemy":
-                if (GM.GameState != GameState.ATTACK)
+                if (GM.GameState != GM.AttackState)
                 {
                     TakeDamage(other.gameObject);
                 }
@@ -151,7 +151,7 @@ public class PlayerController : EntityController
         rot.SetLookRotation(Vector3.back, Vector3.up);
         transform.rotation = rot;
         _lineRenderer.positionCount = 0;
-        GM.GameState = GameState.PLAY;
+        GM.GameState = GM.PlayState;
     }
 
     private IEnumerator DrawPath()
@@ -202,7 +202,7 @@ public class PlayerController : EntityController
         SetMouseOffset();
         if (IsDoubleClick())
         {
-            GM.GameState = GameState.PATH;
+            GM.GameState = GM.PathState;
         }
         else
         {
@@ -221,9 +221,9 @@ public class PlayerController : EntityController
     private void OnMouseUp()
     {
         StopAllCoroutines();
-        if (GM.GameState == GameState.PATH)
+        if (GM.GameState == GM.PathState)
         {
-            GM.GameState = GameState.ATTACK;
+            GM.GameState = GM.AttackState;
             return;
         }
         _draggingPlayer = false;
