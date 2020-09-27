@@ -22,5 +22,5 @@ MonoBehaviour:
   gridRows: 12
   gridColumns: 4
   spawnBoxX: 6
-  spawnBoxLowerY: 3
-  spawnBoxUpperY: 10
+  spawnBoxLowerY: 12
+  spawnBoxUpperY: 19

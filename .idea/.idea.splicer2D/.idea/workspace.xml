@@ -28,26 +28,12 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc8ac25f-bb58-4998-a781-3646a64a0fdf" name="Default Changelist" comment="working viewport, working damage, working label, working damage GUI">
-      <change afterPath="$PROJECT_DIR$/Assets/SceneObjects/GameManager/GameState/GameState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.splicer2D/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.splicer2D/.idea/contentModel.xml" afterDir="false" />
+    <list default="true" id="fc8ac25f-bb58-4998-a781-3646a64a0fdf" name="Default Changelist" comment="working gamestates">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.splicer2D/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.splicer2D/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SceneObjects/Camera/ZoomController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/Camera/ZoomController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SceneObjects/Entity/Enemy/EnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/Entity/Enemy/EnemyController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SceneObjects/Entity/EntityController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/Entity/EntityController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SceneObjects/Entity/EntityController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/Entity/EntityController.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SceneObjects/Entity/Movement/Movement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/Entity/Movement/Movement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SceneObjects/Entity/Movement/MovementA.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/Entity/Movement/MovementA.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SceneObjects/Entity/Obstacle/ObstacleController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/Entity/Obstacle/ObstacleController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SceneObjects/Entity/PowerUp/PowerUpController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/Entity/PowerUp/PowerUpController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SceneObjects/GameManager/GameData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/GameManager/GameData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SceneObjects/GameManager/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/GameManager/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SceneObjects/Entity/Resources/EntityManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/Entity/Resources/EntityManager.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SceneObjects/GameManager/GameManagerAsset.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/GameManager/GameManagerAsset.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SceneObjects/GameManager/InitGameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/GameManager/InitGameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SceneObjects/Player/PathController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/Player/PathController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SceneObjects/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SceneObjects/Player/PlayerController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/splicer2D.apk" beforeDir="false" afterPath="$PROJECT_DIR$/splicer2D.apk" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -145,7 +131,7 @@
       <option name="presentableId" value="Default" />
       <updated>1600892823762</updated>
       <workItem from="1600892837489" duration="293000" />
-      <workItem from="1600893540843" duration="77933000" />
+      <workItem from="1600893540843" duration="79245000" />
     </task>
     <task id="LOCAL-00001" summary="CameraController can now zoom in and zoom out based on click and event">
       <created>1600892940410</created>
@@ -182,7 +168,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601159880521</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="working gamestates">
+      <created>1601218452827</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1601218452827</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,7 +214,8 @@
     <MESSAGE value="Working player-movement on generated path&#10;Rotation still wrong, unoptimized." />
     <MESSAGE value="work on entity manager for spawnbox&#10;todo: implement jittered spawn grid?" />
     <MESSAGE value="working viewport, working damage, working label, working damage GUI" />
-    <option name="LAST_COMMIT_MESSAGE" value="working viewport, working damage, working label, working damage GUI" />
+    <MESSAGE value="working gamestates" />
+    <option name="LAST_COMMIT_MESSAGE" value="working gamestates" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1047" y="424" key="RiderGenerateDialog" timestamp="1600992791162">
@@ -233,10 +227,10 @@
     </state>
     <state x="92" y="92" width="2376" height="1216" key="VCS.FileHistoryDialog/2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1600991247876" />
     <state x="2652" y="92" width="2376" height="1216" key="VCS.FileHistoryDialog/2560.0.2560.1400/0.0.2560.1400@2560.0.2560.1400" timestamp="1601121222232" />
-    <state x="872" y="433" key="Vcs.Push.Dialog.v2" timestamp="1601159937037">
+    <state x="872" y="433" key="Vcs.Push.Dialog.v2" timestamp="1601218456260">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="872" y="433" key="Vcs.Push.Dialog.v2/2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1601159937037" />
+    <state x="872" y="433" key="Vcs.Push.Dialog.v2/2560.0.2560.1400/0.0.2560.1400@0.0.2560.1400" timestamp="1601218456260" />
     <state x="2553" y="0" width="1294" height="1407" key="dock-window-1" timestamp="1600985429270">
       <screen x="2560" y="0" width="2560" height="1400" />
     </state>
