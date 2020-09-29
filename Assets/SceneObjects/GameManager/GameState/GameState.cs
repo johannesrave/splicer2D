@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace DefaultNamespace
+namespace GameManagment
 {
     [CreateAssetMenu(fileName = "GameState", menuName = "ScriptableObject/Game State", order = 0)]
     public class GameState : ScriptableObject

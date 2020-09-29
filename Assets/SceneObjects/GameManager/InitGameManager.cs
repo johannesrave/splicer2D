@@ -1,5 +1,5 @@
 ﻿using System;
-using DefaultNamespace;
+using GameManagment;
 using UnityEngine;
 
 public class InitGameManager : MonoBehaviour
@@ -9,7 +9,7 @@ public class InitGameManager : MonoBehaviour
 
     private void Awake()
     {
-        Debug.Log("Trying to initialize EntityManager");
+        Debug.Log("Trying to initialize GameManager");
         GM = Instantiate(GM);
         // GM = ScriptableObject.CreateInstance<GameManager>();
     }

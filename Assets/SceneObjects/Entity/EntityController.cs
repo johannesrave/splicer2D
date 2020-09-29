@@ -1,4 +1,4 @@
-﻿using DefaultNamespace;
+﻿using GameManagment;
 using UnityEngine;
 
 [RequireComponent(typeof(BoxCollider2D),typeof(SpriteRenderer))]
@@ -61,19 +61,19 @@ public abstract class EntityController : MonoBehaviour
     protected void OnStateChangeHandler(GameState oldState, GameState newState)
     {
         // Debug.Log($"Switched to GM.GameState: {GM.GameState}");
-        if (newState == GM.StartState)
+        if (newState == GM.startState)
         {
             OnStartState();
         }
-        else if (newState == GM.PlayState)
+        else if (newState == GM.playState)
         {
             OnPlayState();
         }
-        else if (newState == GM.PathState)
+        else if (newState == GM.pathState)
         {
             OnPathState();
         }
-        else if (newState == GM.AttackState)
+        else if (newState == GM.attackState)
         {
             OnAttackState();
         }

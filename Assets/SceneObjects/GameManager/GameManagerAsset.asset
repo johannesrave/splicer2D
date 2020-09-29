@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: GameManagerAsset
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 1b2d9c3c276748547936796e67784c3f, type: 2}
-  entityManager: {fileID: 11400000, guid: 9d19668c3e904c3581066bafaa520134, type: 2}
-  StartState: {fileID: 11400000, guid: 97429768595c1604da09c6531a834794, type: 2}
-  PlayState: {fileID: 11400000, guid: 97429768595c1604da09c6531a834794, type: 2}
-  PathState: {fileID: 11400000, guid: 7a1fdab55d445bb41821406f4728242a, type: 2}
-  AttackState: {fileID: 11400000, guid: 5b149280c215f6141891c371c81c31c5, type: 2}
+  entityManagerPrefab: {fileID: 4596636575164820778, guid: c8453eeb545618c4ca835254cbc6c21b, type: 3}
+  entityManager: {fileID: 0}
+  startState: {fileID: 11400000, guid: 95666bb5ef35b974d84ef2dae27c8264, type: 2}
+  playState: {fileID: 11400000, guid: 97429768595c1604da09c6531a834794, type: 2}
+  pathState: {fileID: 11400000, guid: 7a1fdab55d445bb41821406f4728242a, type: 2}
+  attackState: {fileID: 11400000, guid: 5b149280c215f6141891c371c81c31c5, type: 2}

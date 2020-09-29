@@ -63,6 +63,7 @@
             <e p="EntityController.cs" t="Include" />
             <e p="EntityData.cs" t="Include" />
             <e p="EntityManager.cs" t="Include" />
+            <e p="EntityManagerNew.cs" t="Include" />
             <e p="Helper.cs" t="Include" />
             <e p="Movement" t="Include">
               <e p="Movement.cs" t="Include" />

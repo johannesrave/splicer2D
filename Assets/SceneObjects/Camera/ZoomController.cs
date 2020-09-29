@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections;
-using DefaultNamespace;
+using GameManagment;
 using UnityEngine;
 
 public class ZoomController : MonoBehaviour
@@ -66,15 +66,15 @@ public class ZoomController : MonoBehaviour
     // EventHandlers
     protected void OnStateChangeHandler(GameState oldState, GameState newState)
     {
-        if (newState == GM.StartState)
+        if (newState == GM.startState)
         {
             OnStartState();
         }
-        else if (newState == GM.PlayState)
+        else if (newState == GM.playState)
         {
             OnPlayState();
         }
-        else if (newState == GM.PathState)
+        else if (newState == GM.pathState)
         {
             OnPathState();
         }
@@ -88,7 +88,7 @@ public class ZoomController : MonoBehaviour
     private IEnumerator ZoomOut()
     {
         var zoom = _camera.orthographicSize;
-        while (zoom < zoomedOut && GM.GameState == GM.PathState)
+        while (zoom < zoomedOut && GM.GameState == GM.pathState)
         {
             // Debug.Log($"zoom: {zoom}, zoomedOut: {zoomedOut}, GM.GameState: {GM.GameState}");
             // Debug.Log(zoom < zoomedOut && GM.GameState == GameState.PATH);
@@ -106,7 +106,7 @@ public class ZoomController : MonoBehaviour
     private IEnumerator ZoomIn()
     {
         var zoom = _camera.orthographicSize;
-        while (zoom > zoomedIn && GM.GameState == GM.PlayState)
+        while (zoom > zoomedIn && GM.GameState == GM.playState)
         {
             // Debug.Log($"zoom: {zoom}, zoomedIn: {zoomedIn}, GM.GameState: {GM.GameState}");
             // Debug.Log(zoom > zoomedIn && GM.GameState == GameState.PLAY);

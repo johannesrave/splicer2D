@@ -16,13 +16,17 @@ public class EnemyController : EntityController
 
     protected override void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log($"Collision detected. other: {other}");
+        Debug.Log($"Collision detected. other: {other.gameObject.name}");
+        // Debug.Log($"{GM.GameState} == {GM.attackState} = {(other.gameObject.name == "Player" && GM.GameState == GM.attackState)}");
+        
         if (other.gameObject.name == "Level")
         {
             OnEntitityHit();
         }
-        else if (other.gameObject.name == "Player" && GM.GameState == GM.AttackState)
+        else if (other.gameObject.name == "Player" && GM.GameState == GM.attackState)
         {
+            Debug.Log($"Calling OnEntityHit");
+
             OnEntitityHit();
         }
     }

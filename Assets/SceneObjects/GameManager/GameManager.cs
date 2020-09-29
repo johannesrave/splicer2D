@@ -1,9 +1,10 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using System.Collections;
 using UnityEditor;
 using UnityEngine.Playables;
 
-namespace DefaultNamespace
+namespace GameManagment
 {
     [CreateAssetMenu(fileName = "GameManagerAsset", menuName = "ScriptableObject/GameManager", order = 0)]
     public class GameManager : SingletonScriptableObject<GameManager>
@@ -11,13 +12,14 @@ namespace DefaultNamespace
         private GameManager() { }
     
         public GameData data;
-        public EntityManager entityManager;
+        public GameObject entityManagerPrefab;
+        [NonSerialized] public EntityManagerNew entityManager;
 
         private static GameState _gameState;
-        public GameState StartState;
-        public GameState PlayState;
-        public GameState PathState;
-        public GameState AttackState;
+        public GameState startState;
+        public GameState playState;
+        public GameState pathState;
+        public GameState attackState;
 
         public delegate void OnStateChangeHandler(GameState prevGS, GameState newGS);
         public event OnStateChangeHandler OnStateChange;
@@ -25,9 +27,9 @@ namespace DefaultNamespace
         public void Awake()
         {
             Debug.Log("Initializing GameManager");
-            _gameState = StartState;
+            _gameState = startState;
             LoadResources();
-            GameState = PlayState;
+            GameState = playState;
         }
     
     
@@ -35,11 +37,16 @@ namespace DefaultNamespace
         private void LoadResources()
         {
             Debug.Log("Trying to initialize EntityManager");
+            entityManager = Instantiate(entityManagerPrefab).GetComponent<EntityManagerNew>();
+            Debug.Log(entityManager);
+            entityManager.transform.name = entityManager.transform.name.Replace("(Clone)", "");
+            /*
             entityManager = Instantiate<EntityManager>(entityManager);
             StartState = Instantiate<GameState>(StartState);
             PlayState = Instantiate<GameState>(PlayState);
             PathState = Instantiate<GameState>(PathState);
             AttackState = Instantiate<GameState>(AttackState);
+            */
         }
 
         public GameState GameState 
@@ -55,10 +62,3 @@ namespace DefaultNamespace
         }
     }
 }
-
-/*
-public enum GameState
-{
-    START, PLAY, PATH, ATTACK
-}
-*/

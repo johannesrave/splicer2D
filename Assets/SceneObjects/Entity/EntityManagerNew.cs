@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
-[CreateAssetMenu(fileName = "EntityManager", menuName = "EntityManager", order = 0)]
-public class EntityManager : SingletonScriptableObject<EntityManager>
+namespace GameManagment
 {
+    public class EntityManagerNew : MonoBehaviour
+    {
     private readonly List<GameObject> _enemies = new List<GameObject>();
     private readonly List<GameObject> _obstacles = new List<GameObject>();
     private readonly List<GameObject> _powerups = new List<GameObject>();
@@ -20,10 +19,6 @@ public class EntityManager : SingletonScriptableObject<EntityManager>
     [SerializeField] private int maxPowerups = 0;
     [SerializeField] private float spawnThreshold = 5;
     
-    [SerializeField] private int gridRows = 12;
-    [SerializeField] private int gridColumns = 4;
-    private int[] _spawnGrid;
-
     public int spawnBoxX = 6; 
     public int spawnBoxLowerY = 3; 
     public int spawnBoxUpperY = 10; 
@@ -33,7 +28,7 @@ public class EntityManager : SingletonScriptableObject<EntityManager>
     {
         Debug.Log("Initializing EntityManager.");
 
-        RemoveOldEntities();
+        // RemoveOldEntities();
         
         enemy = Resources.Load<GameObject>("Enemy");
         obstacle = Resources.Load<GameObject>("Obstacle");
@@ -48,9 +43,7 @@ public class EntityManager : SingletonScriptableObject<EntityManager>
 
     private void RemoveOldEntities()
     {
-        Transform parent = GameObject.Find("GameManagerHook").transform;
-
-        foreach (Transform child in parent)
+        foreach (Transform child in transform)
         {
             Destroy(child);
         }
@@ -75,11 +68,10 @@ public class EntityManager : SingletonScriptableObject<EntityManager>
 
     private void FillUpSingleList(ICollection<GameObject> collection, GameObject entity, int maxNumber)
     {
-        Transform parent = GameObject.Find("GameManagerHook").transform;
         // Debug.Log($"Filling up {collection} of {entity}");
         for (int i = collection.Count; i < maxNumber; i++)
         {
-            var newEntity = Instantiate(entity, parent, true);
+            var newEntity = Instantiate(entity, transform, true);
             MoveEntityToFreeSpot(newEntity);
             RegisterToHitEventOf(newEntity);
             collection.Add(newEntity);
@@ -124,5 +116,6 @@ public class EntityManager : SingletonScriptableObject<EntityManager>
             // Debug.Log($"No collision found in {collection}");
         }
         return true;
+    }
     }
 }

@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using DefaultNamespace;
+using GameManagment;
 using PathCreation;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -115,15 +115,15 @@ public class PathController : MonoBehaviour
     
     protected void OnStateChangeHandler(GameState oldState, GameState newState)
     {
-        if (newState == GM.StartState)
+        if (newState == GM.startState)
         {
             OnStartState();
         }
-        else if (newState == GM.PlayState)
+        else if (newState == GM.playState)
         {
             OnPlayState();
         }
-        else if (newState == GM.PathState)
+        else if (newState == GM.pathState)
         {
             OnPathState();
         }
