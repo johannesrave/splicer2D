@@ -4,7 +4,13 @@
 /obj/Debug/
 /Logs/
 /Assets/Plugins/ConsoleE/
+/Assets/PathCreator/
+/Assets/TextMesh Pro/
+/Assets/Scenes/
+/Assets/Textures/
 /Assets/Old/
 
 *.asset
 *.meta
+*.ttf
+*.csproj
