@@ -24,10 +24,10 @@ namespace GameManagment
         public delegate void OnStateChangeHandler(GameState prevGS, GameState newGS);
         public event OnStateChangeHandler OnStateChange;
 
-        public void Awake()
+        public void OnEnable()
         {
-            Debug.Log("Initializing GameManager");
-            _gameState = startState;
+            // Debug.Log("Initializing GameManager");
+            GameState = startState;
             LoadResources();
             GameState = playState;
         }
@@ -40,13 +40,6 @@ namespace GameManagment
             entityManager = Instantiate(entityManagerPrefab).GetComponent<EntityManagerNew>();
             Debug.Log(entityManager);
             entityManager.transform.name = entityManager.transform.name.Replace("(Clone)", "");
-            /*
-            entityManager = Instantiate<EntityManager>(entityManager);
-            StartState = Instantiate<GameState>(StartState);
-            PlayState = Instantiate<GameState>(PlayState);
-            PathState = Instantiate<GameState>(PathState);
-            AttackState = Instantiate<GameState>(AttackState);
-            */
         }
 
         public GameState GameState 

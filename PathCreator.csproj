@@ -63,10 +63,10 @@
      <Compile Include="Assets\PathCreator\Core\Runtime\Utility\VertexPathUtility.cs" />
      <None Include="Assets\PathCreator\Core\Runtime\PathCreator.asmdef" />
  <Reference Include="UnityEditor.UI">
- <HintPath>C:/Users/Johannes Rave/SynologyDrive/unity/splicer2D/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>D:/SynologyDrive/unity/splicer2D/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>C:/Users/Johannes Rave/SynologyDrive/unity/splicer2D/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>D:/SynologyDrive/unity/splicer2D/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine">
  <HintPath>D:/Unity/2020.1.6f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
@@ -264,7 +264,7 @@
  <HintPath>D:/Unity/2020.1.6f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="ConsoleE">
- <HintPath>C:/Users/Johannes Rave/SynologyDrive/unity/splicer2D/Assets/Plugins/ConsoleE/Editor/ConsoleE.dll</HintPath>
+ <HintPath>D:/SynologyDrive/unity/splicer2D/Assets/Plugins/ConsoleE/Editor/ConsoleE.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>D:/Unity/2020.1.6f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

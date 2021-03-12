@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1388653468}
   - component: {fileID: 1388653467}
   m_Layer: 0
-  m_Name: Particle System (1)
+  m_Name: PlayerDrive
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4896,9 +4896,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddc5f574ed81499a8e9bae1929e02c58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: 5fff9a7137eb29d41bc9218bfd1ac7f8, type: 2}
   movement: {fileID: 0}
   speed: 20
+  health: 100
   pathPrefab: {fileID: 5907770188668069406, guid: 3e85f41552f3fc9459145846bb76e65a, type: 3}
   sliceTime: 0.05
   spacing: 0.5

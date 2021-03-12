@@ -92,7 +92,7 @@ namespace GameManagment
         int tries = 10;
         
         while (!FindSpawnPoint(out randomPosition) && tries > 0) { tries--; }
-        Debug.Log($"Free spot at {randomPosition}");
+        // Debug.Log($"Free spot at {randomPosition}");
         hitEntity.transform.position = randomPosition;    }
 
 

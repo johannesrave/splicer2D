@@ -122,8 +122,8 @@ public class ZoomController : MonoBehaviour
         _camera.orthographicSize = zoomedOut;
     }
 
-    private void OnDestroy()
+    /*private void OnDestroy()
     {
         Debug.Log("ZoomController destroyed!");
-    }
+    }*/
 }

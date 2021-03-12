@@ -1,6 +1,10 @@
 ﻿/Library/
-/.idea/.idea.splicer2D_02/
+/.idea/*
 /Temp/
 /obj/Debug/
 /Logs/
 /Assets/Plugins/ConsoleE/
+/Assets/Old/
+
+*.asset
+*.meta

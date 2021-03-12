@@ -19,7 +19,7 @@ public class PlayerController : EntityController
     private double _maxdelay = 0.25f;
     
     // Path variables
-    [SerializeField] private GameObject pathPrefab;
+    [SerializeField] private GameObject pathPrefab = default;
     private GameObject _path;
     private PathCreator _pathcreator;
     private List<Vector2> waypoints = new List<Vector2>();
@@ -158,15 +158,15 @@ public class PlayerController : EntityController
     {
         _path.SetActive(true);
         waypoints.Clear();
-        waypoints.Add(_transform.position);
+        waypoints.Add(_transform.localPosition);
         waypoints.Add(waypoints[0]);
-        while (true)
+        while (GM.GameState == GM.pathState)
         {
             // Set second to last point var, and
             // set last point to current path obj position
-            Vector2 prevPt = waypoints[waypoints.Count-2];
+            Vector2 prevPt = waypoints[waypoints.Count-2] != default ? waypoints[waypoints.Count-2] : (Vector2)_transform.localPosition;
             Vector2 finalPt = (Vector2) _camera.ScreenToWorldPoint(Input.mousePosition) - _offset;
-            waypoints[waypoints.Count-1] = finalPt;
+            // waypoints[waypoints.Count-1] = finalPt;
 
             // Debug.Log(Vector2.Distance(prevPt, finalPt) + ">" + spacing);
             // If current and second to last points are far enough apart,
@@ -193,6 +193,7 @@ public class PlayerController : EntityController
 
             yield return new WaitForSeconds(sliceTime);
         }
+        _path.SetActive(false);
     }
     #endregion
     
